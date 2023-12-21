@@ -1,0 +1,4327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="assets/img/basic/favicon.ico" type="image/x-icon">
+    <title>Paper</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/panel.css">
+    <style>
+        .loader {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #F5F8FA;
+            z-index: 9998;
+            text-align: center;
+        }
+
+        .plane-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+    </style>
+</head>
+<body>
+<!-- Pre loader -->
+<div id="loader" class="loader">
+    <div class="plane-container">
+        <div class="preloader-wrapper small active">
+            <div class="spinner-layer spinner-blue">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div><div class="gap-patch">
+                <div class="circle"></div>
+            </div><div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+            </div>
+
+            <div class="spinner-layer spinner-red">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div><div class="gap-patch">
+                <div class="circle"></div>
+            </div><div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+            </div>
+
+            <div class="spinner-layer spinner-yellow">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div><div class="gap-patch">
+                <div class="circle"></div>
+            </div><div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+            </div>
+
+            <div class="spinner-layer spinner-green">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div><div class="gap-patch">
+                <div class="circle"></div>
+            </div><div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="app" class="paper-loading">
+<aside class="main-sidebar fixed offcanvas shadow">
+    <section class="sidebar">
+        <div class="w-80px mt-3 mb-3 ml-3">
+            <img src="assets/img/basic/logo.png" alt="">
+        </div>
+        <div class="relative">
+            <a data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false"
+               aria-controls="multiCollapseExample1" class="btn-fab btn-fab-sm fab-right fab-top btn-primary shadow1 ">
+                <i class="icon icon-cogs"></i>
+            </a>
+            <p>
+            <div class="user-panel p-3 light mb-2">
+                <div class="clearfix">
+                    <div class="float-left image">
+                        <img class="user_avatar" src="assets/img/dummy/u2.png" alt="User Image">
+                    </div>
+                    <div class="float-left info">
+                        <h6 class="font-weight-light mt-2 mb-1">Alexander Pierce</h5>
+                            <a href="#"><i class="icon-circle text-primary blink"></i> Online</a>
+                    </div>
+                </div>
+                <div class="collapse multi-collapse" id="multiCollapseExample1">
+                    <div class=" p-3">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <ul class="sidebar-menu">
+            <li class="header"><strong>MAIN NAVIGATION</strong></li>
+            <li class="treeview"><a href="#">
+                <i class="icon icon-sailing-boat-water purple-text s-18"></i> <span>Dashboard</span> <i
+                    class="icon icon-angle-left s-18 pull-right"></i>
+            </a>
+                <ul class="treeview-menu">
+                    <li><a href="dashboard.html"><i class="icon icon-circle-o"></i>User Dashboard</a>
+                    </li>
+                    <li><a href="panel-page-dashboard.html"><i class="icon icon-folder5"></i>Panel Dashboard 1</a>
+                    </li>
+                    <li><a href="panel-page-dashboard2.html"><i class="icon icon-folder5"></i>Panel Dashboard 2</a>
+                    </li>
+                    <li><a href="panel-page-dashboard3.html"><i class="icon icon-folder5"></i>Panel Dashboard 3</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="treeview"><a href="#">
+                <i class="icon icon icon-package blue-text s-18"></i>
+                <span>Products</span>
+                <span class="badge r-3 badge-primary pull-right">4</span>
+            </a>
+                <ul class="treeview-menu">
+                    <li><a href="panel-page-products.html"><i class="icon icon-circle-o"></i>All Products</a>
+                    </li>
+                    <li><a href="panel-page-products-create.html"><i class="icon icon-add"></i>Add
+                        New </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="treeview"><a href="#"><i class="icon icon-user-circle-o light-green-text s-18"></i>Users<i
+                    class="icon icon-angle-left s-18 pull-right"></i></a>
+                <ul class="treeview-menu">
+                    <li><a href="panel-page-users.html"><i class="icon icon-circle-o"></i>All Users</a>
+                    </li>
+                    <li><a href="panel-page-profile.html"><i class="icon icon-add"></i>User Profile </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="no-b"><a href="panel-page-inbox.html">
+                <i class="icon icon-package light-green-text s-18"></i>
+                <span>Inbox</span>
+                <span class="badge r-3 badge-success pull-right">20</span>
+            </a>
+            </li>
+            <li class="header light mt-3"><strong>UI COMPONENTS</strong></li>
+
+            <li class="treeview ">
+                <a href="#">
+                    <i class="icon icon-package text-lime s-18"></i> <span>Apps</span>
+                    <i class="icon icon-angle-left s-18 pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="panel-page-chat.html"><i class="icon icon-circle-o"></i>Chat</a>
+                    </li>
+
+                    <li><a href="panel-page-calendar.html"><i class="icon icon-date_range"></i>Calender</a>
+                    </li>
+                    <li><a href="#"><i class="icon icon-circle-o"></i>Support</a>
+                    </li>
+                    <li><a href="#"><i class="icon icon-circle-o"></i>Contacts</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="icon icon-documents3 text-blue s-18"></i> <span>Pages</span>
+                    <i class="icon icon-angle-left s-18 pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="#"><i class="icon icon-documents3"></i>Blank Pages<i
+                            class="icon icon-angle-left s-18 pull-right"></i></a>
+                        <ul class="treeview-menu">
+                            <li><a href="panel-page-blank.html"><i class="icon icon-document"></i>Simple Blank</a>
+                            </li>
+                            <li><a href="panel-page-blank-tabs.html"><i class="icon icon-document"></i>Tabs Blank <i
+                                    class="icon icon-angle-left s-18 pull-right"></i></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="icon icon-fingerprint text-green"></i>Auth Pages<i
+                            class="icon icon-angle-left s-18 pull-right"></i></a>
+                        <ul class="treeview-menu">
+                            <li><a href="login-2.html"><i class="icon icon-document"></i>Login Page</a>
+                            </li>
+                            <li><a href="login-3.html"><i class="icon icon-document"></i>Login Page 3</a>
+                            </li>
+                            <li><a href="login-4.html"><i class="icon icon-document"></i>Login Page 4</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="icon icon-bug text-red"></i>Error Pages<i
+                            class="icon icon-angle-left s-18 pull-right"></i></a>
+                        <ul class="treeview-menu">
+                            <li><a href="panel-page-404.html"><i class="icon icon-document"></i>404 Page</a>
+                            </li>
+                            <li><a href="panel-page-500.html"><i class="icon icon-document"></i>500 Page<i
+                                    class="icon icon-angle-left s-18 pull-right"></i></a>
+                            </li>
+                            <li><a href="panel-page-error.html"><i class="icon icon-document"></i>420 Page<i
+                                    class="icon icon-angle-left s-18 pull-right"></i></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="icon icon-documents3"></i>Other Pages<i
+                            class="icon icon-angle-left s-18 pull-right"></i></a>
+                        <ul class="treeview-menu">
+
+                            <li><a href="panel-page-invoice.html"><i class="icon icon-document"></i>Invoice Page</a>
+                            </li>
+                            <li><a href="panel-page-no-posts.html"><i class="icon icon-document"></i>No Post Page</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="icon icon-goals-1 amber-text s-18"></i> <span>Elements</span>
+                    <i class="icon icon-angle-left s-18 pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="panel-element-widgets.html">
+                        <i class="icon icon-widgets amber-text s-14"></i> <span>Widgets</span>
+                    </a>
+                    </li>
+                    <li><a href="panel-element-counters.html">
+                        <i class="icon icon-filter_9_plus amber-text s-14"></i> <span>Counters</span>
+                    </a>
+                    <li><a href="element-buttons.html">
+                        <i class="icon icon-touch_app amber-text s-14"></i> <span>Buttons</span>
+                    </a>
+
+                    </li>
+                    <li>
+                        <a href="panel-element-typography.html">
+                            <i class="icon icon-text-width amber-text s-14"></i> <span>Typography</span>
+                        </a>
+                    </li>
+
+                    <li><a href="panel-element-tabels.html">
+                        <i class="icon icon-table amber-text s-14"></i> <span>Tables</span>
+                    </a>
+                    </li>
+                    <li><a href="panel-element-alerts.html">
+                        <i class="icon icon-exclamation-circle amber-text s-14"></i> <span>Alerts</span>
+                    </a>
+                    </li>
+
+                    <li><a href="panel-element-slider.html"><i class="icon icon-view_carousel amber-text s-14"></i>
+                        <span>Slider</span></a></li>
+                    <li><a href="panel-element-tabs.html"><i class="icon icon-folders2 amber-text s-14"></i>
+                        <span>Tabs</span></a></li>
+                </ul>
+            </li>
+            <li class="treeview ">
+                <a href="#">
+                    <i class="icon icon-wpforms light-green-text s-18 "></i> <span>Forms & Plugins</span>
+                    <i class="icon icon-angle-left s-18 pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="panel-element-forms.html"><i class="icon icon-wpforms light-green-text"></i>Bootstrap Inputs</a>
+                    </li>
+                    <li><a href="panel-element-editor.html"><i class="icon icon-pen2 light-green-text"></i>Editor</a>
+                    </li>
+                    <li><a href="panel-element-toast.html"><i class="icon icon-notifications_active light-green-text"></i>Toasts</a>
+                    </li>
+                    <li><a href="panel-element-stepper.html"><i class="icon icon-burst_mode light-green-text"></i>Stepper</a>
+                    </li>
+                    <li><a href="panel-element-date-time-picker.html"><i class="icon icon-date_range light-green-text"></i>Date Time Picker</a>
+                    </li>
+
+                    <li><a href="panel-element-color-picker.html"><i class="icon icon-adjust light-green-text"></i>Color Picker</a>
+                    </li>
+                    <li><a href="panel-element-range-slider.html"><i class="icon icon-space_bar light-green-text"></i>Range Slider</a>
+                    </li>
+                    <li><a href="panel-element-select2.html"><i class="icon  icon-one-finger-click light-green-text"></i>Select 2</a>
+                    </li>
+                    <li><a href="panel-element-tags.html"><i class="icon  icon-tags3 light-green-text"></i>Tags</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="treeview"><a href="#">
+                <i class="icon icon-bar-chart2 pink-text s-18"></i>
+                <span>Charts</span>
+                <i class="icon icon-angle-left s-18 pull-right"></i>
+            </a>
+                <ul class="treeview-menu">
+                    <li>
+                        <a href="panel-element-charts-js.html"><i class="icon icon-area-chart pink-text s-14"></i><span>Charts.Js</span></a>
+                    </li>
+                    <li>
+                        <a href="panel-element-morris.html"><i class="icon icon-bubble_chart pink-text s-14"></i>Morris
+                            Charts</a>
+                    </li>
+                    <li>
+                        <a href="panel-element-echarts.html">
+                            <i class="icon icon-bar-chart-o pink-text s-14"></i>Echarts</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="panel-element-other-charts.html">
+                            <i class="icon icon-line-chart-2 pink-text s-14"></i>Other Charts</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="treeview"><a href="#">
+                <i class="icon icon-dialpad blue-text  s-18"></i>
+                <span>Extra</span>
+                <i class="icon icon-angle-left s-18 pull-right"></i>
+            </a>
+                <ul class="treeview-menu">
+                    <li>
+                        <a href="panel-element-letters.html">
+                            <i class="icon icon-brightness_auto light-blue-text s-14"></i>
+                            <span>Avatar Placeholders</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="panel-element-icons.html">
+                            <i class="icon icon-camera2 light-blue-text s-14"></i> <span>Icons</span>
+                        </a>
+                    </li>
+                    <li><a href="panel-element-colors.html">
+                        <i class="icon icon-palette light-blue-text s-14"></i> <span>Colors</span>
+                    </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+</aside>
+<!--Sidebar End-->
+<div class="offcanvas-page">
+    <div class="pos-f-t">
+    <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-dark pt-2 pb-2 pl-4 pr-2">
+            <div class="search-bar">
+                <input class="transparent s-24 text-white b-0 font-weight-lighter w-128 height-50" type="text"
+                       placeholder="start typing...">
+            </div>
+            <a href="#" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-expanded="false"
+               aria-label="Toggle navigation" class="paper-nav-toggle paper-nav-white active "><i></i></a>
+        </div>
+    </div>
+</div>
+    <div class="sticky">
+        <div class="navbar navbar-expand navbar-dark d-flex justify-content-between bd-navbar blue accent-3">
+            <div class="relative">
+                <a href="#" data-toggle="offcanvas" class="paper-nav-toggle pp-nav-toggle">
+                    <i></i>
+                </a>
+            </div>
+            <!--Top Menu Start -->
+<ul class="navbar-nav p-t-10">
+    <!-- Messages Dropdown-->
+    <li class="nav-item ml-2 dropdown">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-expanded="false">
+            <i class="icon-message s-18"></i>
+            <span class="badge badge-success badge-mini rounded-circle">4</span>
+        </a>
+        <ul class="dropdown-menu width-250 p-0 dropdown-menu-right b-0 shadow1">
+            <li class="p-2 b-b">
+                <span class="s-12">
+                    <i class="icon-message"></i> You have 4 messages </span>
+            </li>
+            <li>
+                <div class="slimScroll" data-height="225">
+                    <ul class="list-unstyled p-3">
+                        <li class="media">
+                            <img class="mr-4 w-15" src="assets/img/dummy/u1.png" alt="">
+                            <div class="media-body">
+                                <h6 class="mt-0 mb-0 font-weight-normal s-14">Doe Joe</h6>
+                                <small class="s-12"> 7 minutes ago</small>
+                            </div>
+                        </li>
+                        <li class="media my-4">
+                            <img class="mr-4 w-15" src="assets/img/dummy/u2.png" alt="">
+                            <div class="media-body">
+                                <h6 class="mt-0 mb-0 font-weight-normal s-14">Doe Joe</h6>
+                                <small class="s-12"> 7 minutes ago</small>
+                            </div>
+                        </li>
+                        <li class="media my-4">
+                            <img class="mr-4 w-15" src="assets/img/dummy/u3.png" alt="">
+                            <div class="media-body">
+                                <h6 class="mt-0 mb-0 font-weight-normal s-14">Doe Joe</h6>
+                                <small class="s-12"> 7 minutes ago</small>
+                            </div>
+                        </li>
+                        <li class="media my-4">
+                            <img class="mr-4 w-15" src="assets/img/dummy/u4.png" alt="">
+                            <div class="media-body">
+                                <h6 class="mt-0 mb-0 font-weight-normal s-14">Doe Joe</h6>
+                                <small class="s-12"> 7 minutes ago</small>
+                            </div>
+                        </li>
+                        <li class="media my-4">
+                            <img class="mr-4 w-15" src="assets/img/dummy/u5.png" alt="">
+                            <div class="media-body">
+                                <h6 class="mt-0 mb-0 font-weight-normal s-14">Doe Joe</h6>
+                                <small class="s-12"> 7 minutes ago</small>
+                            </div>
+                        </li>
+                        <li class="media my-4">
+                            <img class="mr-4 w-15" src="assets/img/dummy/u6.png" alt="">
+                            <div class="media-body">
+                                <h6 class="mt-0 mb-0 font-weight-normal s-14">Doe Joe</h6>
+                                <small class="s-12"> 7 minutes ago</small>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="p-1 b-t text-center">
+                <a class="s-12" href="#">See All Messages</a>
+            </li>
+        </ul>
+    </li>
+    <!-- Notification Dropdown-->
+    <li class="nav-item ml-2 dropdown">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-expanded="false">
+            <i class="icon-notifications s-18"></i>
+            <span class="badge badge-danger badge-mini rounded-circle">4</span>
+        </a>
+        <ul class="dropdown-menu width-250 p-0 dropdown-menu-right b-0 shadow1">
+            <li class="p-2 b-b">
+                <span class="s-12">
+                    <i class="icon-notifications text-danger"></i>You have 5 notifications </span>
+            </li>
+            <li>
+                <div class="slimScroll" data-height="225">
+                    <ul class="list-unstyled list-group list-group-striped">
+                        <li class="p-2">
+                            <a href="#" class="s-12">
+                                <i class="icon-data_usage text-blue"></i> 5 new members joined today
+                            </a>
+                        </li>
+                        <li class="p-2">
+                            <a href="#" class="s-12">
+                                <i class="icon-data_usage text-success"></i> 5 new members joined today
+                            </a>
+                        </li>
+                        <li class="p-2">
+                            <a href="#" class="s-12">
+                                <i class="icon-data_usage text-danger"></i> 5 new members joined today
+                            </a>
+                        </li>
+                        <li class="p-2">
+                            <a href="#" class="s-12">
+                                <i class="icon-data_usage text-yellow"></i> 5 new members joined today
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="p-1 b-t text-center">
+                <a class="s-12" href="#">See All Messages</a>
+            </li>
+        </ul>
+    </li>
+    <li class="nav-item ml-2">
+        <a class="nav-link " data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <i class=" icon-search3 s-18"></i>
+        </a>
+    </li>
+    <li class="nav-item ml-2">
+        <a class="nav-link ml-2" data-toggle="control-sidebar">
+            <i class="icon-tasks s-18"></i>
+        </a>
+    </li>
+    <li class="nav-item ml-2 dropdown">
+        <a class="nav-item ml-2 nav-link  ml-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="icon-more_vert s-18"></i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right b-0 shadow1">
+            <a class="dropdown-item" href="#">
+                <i class="icon-profile"></i> View Profile </a>
+            <a class="dropdown-item" href="#">
+                <i class="icon-cog"></i> Account Settings </a>
+            <a class="dropdown-item" href="#">
+                <i class="icon-money"></i> Earning Reports </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">
+                <i class="icon-money"></i> Logout </a>
+        </div>
+    </li>
+</ul>
+<!--Top Menu End -->
+        </div>
+    </div>
+</div>
+<div class="page light offcanvas-page">
+    <header class="blue accent-3 relative nav-sticky">
+        <div class="container-fluid text-white">
+            <div class="row p-t-b-10 ">
+                <div class="col">
+                    <h4>
+                        <i class="icon icon-palette"></i>
+                        Colors
+                    </h4>
+                </div>
+            </div>
+            <div class="row">
+                <ul class="nav responsive-tab nav-material nav-material-white">
+                    <li>
+                        <a class="nav-link" href="panel-element-letters.html">
+                            <i class="icon icon-brightness_auto"></i>Avatar Placeholders</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="panel-element-icons.html">
+                            <i class="icon icon-camera2"></i>Icons</a>
+                    </li>
+                    <li>
+                        <a class="nav-link active" href="panel-element-colors.html">
+                            <i class="icon icon-palette"></i>Colors</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid animatedParent animateOnce">
+        <div class="animated fadeInUpShort my-3">
+            <ul class="list-unstyled d-flex align-content-start flex-wrap">
+
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle red lighten-5"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong># red lighten-5</strong>
+                                </div>
+                                <small>ffebee</small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle red lighten-4"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong># red lighten-4</strong>
+                                </div>
+                                <small>ffcdd2</small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle red lighten-3"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong># red lighten-3</strong>
+                                </div>
+                                <small>ef9a9a</small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle red lighten-2"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong># red lighten-2</strong>
+                                </div>
+                                <small>e57373</small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle red lighten-1"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong># red lighten-1</strong>
+                                </div>
+                                <small>ef5350</small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle red"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong># red</strong>
+                                </div>
+                                <small>f44336</small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle red darken-1"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong># red darken-1</strong>
+                                </div>
+                                <small>e53935</small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle red darken-2"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong># red darken-2</strong>
+                                </div>
+                                <small>d32f2f</small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle red darken-3"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong># red darken-3</strong>
+                                </div>
+                                <small>c62828</small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle red darken-4"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong># red darken-4</strong>
+                                </div>
+                                <small>b71c1c</small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle red accent-1"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong># red accent-1</strong>
+                                </div>
+                                <small>ff8a80</small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle red accent-2"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong># red accent-2</strong>
+                                </div>
+                                <small>ff5252</small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle red accent-3"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong># red accent-3</strong>
+                                </div>
+                                <small>ff1744</small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle red accent-4"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong># red accent-4</strong>
+                                </div>
+                                <small>d50000</small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+
+
+
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle pink lighten-4"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#f8bbd0 pink lighten-4</strong>
+                                </div>
+                                <small>f8bbd0</small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle pink lighten-3"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#f48fb1 pink lighten-3</strong>
+                                </div>
+                                <small>f48fb1</small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle pink lighten-2"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#f06292 pink lighten-2</strong>
+                                </div>
+                                <small>f06292</small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle pink lighten-1"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#ec407a pink lighten-1</strong>
+                                </div>
+                                <small>ec407a</small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle pink"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong># pink</strong>
+                                </div>
+                                <small>e91e63</small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle pink darken-1"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong># pink darken-1</strong>
+                                </div>
+                                <small>d81b60</small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle pink darken-2"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong># pink darken-2</strong>
+                                </div>
+                                <small>c2185b</small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle pink darken-3"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong># pink darken-3</strong>
+                                </div>
+                                <small>ad1457</small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle pink darken-4"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong># pink darken-4</strong>
+                                </div>
+                                <small>880e4f</small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle pink accent-1"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong># pink accent-1</strong>
+                                </div>
+                                <small>ff80ab</small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle pink accent-2"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong># pink accent-2</strong>
+                                </div>
+                                <small>ff4081</small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle pink accent-3"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong># pink accent-3</strong>
+                                </div>
+                                <small>f50057</small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle pink accent-4"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong># pink accent-4</strong>
+                                </div>
+                                <small>c51162</small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle purple lighten-5"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#f3e5f5 purple lighten-5</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle purple lighten-4"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#e1bee7 purple lighten-4</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle purple lighten-3"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#ce93d8 purple lighten-3</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle purple lighten-2"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#ba68c8 purple lighten-2</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle purple lighten-1"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#ab47bc purple lighten-1</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle purple"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#9c27b0 purple</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle purple darken-1"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#8e24aa purple darken-1</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle purple darken-2"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#7b1fa2 purple darken-2</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle purple darken-3"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#6a1b9a purple darken-3</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle purple darken-4"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#4a148c purple darken-4</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle purple accent-1"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#ea80fc purple accent-1</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle purple accent-2"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#e040fb purple accent-2</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle purple accent-3"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#d500f9 purple accent-3</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle purple accent-4"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#aa00ff purple accent-4</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle deep-purple lighten-5"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#ede7f6 deep-purple lighten-5</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle deep-purple lighten-4"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#d1c4e9 deep-purple lighten-4</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle deep-purple lighten-3"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#b39ddb deep-purple lighten-3</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle deep-purple lighten-2"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#9575cd deep-purple lighten-2</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle deep-purple lighten-1"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#7e57c2 deep-purple lighten-1</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle deep-purple"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#673ab7 deep-purple</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle deep-purple darken-1"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#5e35b1 deep-purple darken-1</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle deep-purple darken-2"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#512da8 deep-purple darken-2</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle deep-purple darken-3"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#4527a0 deep-purple darken-3</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle deep-purple darken-4"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#311b92 deep-purple darken-4</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle deep-purple accent-1"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#b388ff deep-purple accent-1</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle deep-purple accent-2"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#7c4dff deep-purple accent-2</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle deep-purple accent-3"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#651fff deep-purple accent-3</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle deep-purple accent-4"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#6200ea deep-purple accent-4</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle indigo lighten-5"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#e8eaf6 indigo lighten-5</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle indigo lighten-4"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#c5cae9 indigo lighten-4</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle indigo lighten-3"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#9fa8da indigo lighten-3</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle indigo lighten-2"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#7986cb indigo lighten-2</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle indigo lighten-1"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#5c6bc0 indigo lighten-1</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle indigo"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#3f51b5 indigo</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle indigo darken-1"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#3949ab indigo darken-1</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle indigo darken-2"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#303f9f indigo darken-2</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle indigo darken-3"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#283593 indigo darken-3</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle indigo darken-4"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#1a237e indigo darken-4</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle indigo accent-1"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#8c9eff indigo accent-1</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle indigo accent-2"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#536dfe indigo accent-2</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle indigo accent-3"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#3d5afe indigo accent-3</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle indigo accent-4"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#304ffe indigo accent-4</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle blue lighten-5"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#e3f2fd blue lighten-5</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle blue lighten-4"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#bbdefb blue lighten-4</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle blue lighten-3"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#90caf9 blue lighten-3</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle blue lighten-2"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#64b5f6 blue lighten-2</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle blue lighten-1"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#42a5f5 blue lighten-1</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle blue"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#2196f3 blue</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle blue darken-1"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#1e88e5 blue darken-1</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle blue darken-2"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#1976d2 blue darken-2</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle blue darken-3"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#1565c0 blue darken-3</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle blue darken-4"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#0d47a1 blue darken-4</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle blue accent-1"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#82b1ff blue accent-1</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle blue accent-2"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#448aff blue accent-2</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle blue accent-3"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#2979ff blue accent-3</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle blue accent-4"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#2962ff blue accent-4</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle light-blue lighten-5"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#e1f5fe light-blue lighten-5</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle light-blue lighten-4"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#b3e5fc light-blue lighten-4</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle light-blue lighten-3"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#81d4fa light-blue lighten-3</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle light-blue lighten-2"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#4fc3f7 light-blue lighten-2</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle light-blue lighten-1"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#29b6f6 light-blue lighten-1</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle light-blue"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#03a9f4 light-blue</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle light-blue darken-1"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#039be5 light-blue darken-1</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle light-blue darken-2"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#0288d1 light-blue darken-2</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle light-blue darken-3"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#0277bd light-blue darken-3</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle light-blue darken-4"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#01579b light-blue darken-4</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle light-blue accent-1"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#80d8ff light-blue accent-1</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle light-blue accent-2"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#40c4ff light-blue accent-2</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle light-blue accent-3"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#00b0ff light-blue accent-3</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle light-blue accent-4"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#0091ea light-blue accent-4</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle cyan lighten-5"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#e0f7fa cyan lighten-5</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle cyan lighten-4"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#b2ebf2 cyan lighten-4</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle cyan lighten-3"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#80deea cyan lighten-3</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle cyan lighten-2"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#4dd0e1 cyan lighten-2</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle cyan lighten-1"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#26c6da cyan lighten-1</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle cyan"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#00bcd4 cyan</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle cyan darken-1"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#00acc1 cyan darken-1</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle cyan darken-2"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#0097a7 cyan darken-2</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle cyan darken-3"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#00838f cyan darken-3</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle cyan darken-4"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#006064 cyan darken-4</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle cyan accent-1"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#84ffff cyan accent-1</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle cyan accent-2"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#18ffff cyan accent-2</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle cyan accent-3"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#00e5ff cyan accent-3</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle cyan accent-4"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#00b8d4 cyan accent-4</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle teal lighten-5"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#e0f2f1 teal lighten-5</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle teal lighten-4"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#b2dfdb teal lighten-4</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle teal lighten-3"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#80cbc4 teal lighten-3</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle teal lighten-2"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#4db6ac teal lighten-2</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle teal lighten-1"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#26a69a teal lighten-1</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle teal"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#009688 teal</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle teal darken-1"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#00897b teal darken-1</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle teal darken-2"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#00796b teal darken-2</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle teal darken-3"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#00695c teal darken-3</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle teal darken-4"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#004d40 teal darken-4</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle teal accent-1"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#a7ffeb teal accent-1</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle teal accent-2"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#64ffda teal accent-2</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle teal accent-3"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#1de9b6 teal accent-3</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle teal accent-4"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#00bfa5 teal accent-4</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle green lighten-5"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#e8f5e9 green lighten-5</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle green lighten-4"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#c8e6c9 green lighten-4</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle green lighten-3"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#a5d6a7 green lighten-3</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle green lighten-2"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#81c784 green lighten-2</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle green lighten-1"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#66bb6a green lighten-1</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle green"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#4caf50 green</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle green darken-1"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#43a047 green darken-1</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle green darken-2"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#388e3c green darken-2</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle green darken-3"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#2e7d32 green darken-3</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle green darken-4"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#1b5e20 green darken-4</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle green accent-1"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#b9f6ca green accent-1</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle green accent-2"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#69f0ae green accent-2</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle green accent-3"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#00e676 green accent-3</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle green accent-4"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#00c853 green accent-4</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle light-green lighten-5"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#f1f8e9 light-green lighten-5</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle light-green lighten-4"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#dcedc8 light-green lighten-4</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle light-green lighten-3"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#c5e1a5 light-green lighten-3</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle light-green lighten-2"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#aed581 light-green lighten-2</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle light-green lighten-1"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#9ccc65 light-green lighten-1</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle light-green"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#8bc34a light-green</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle light-green darken-1"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#7cb342 light-green darken-1</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle light-green darken-2"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#689f38 light-green darken-2</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle light-green darken-3"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#558b2f light-green darken-3</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle light-green darken-4"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#33691e light-green darken-4</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle light-green accent-1"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#ccff90 light-green accent-1</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle light-green accent-2"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#b2ff59 light-green accent-2</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle light-green accent-3"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#76ff03 light-green accent-3</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle light-green accent-4"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#64dd17 light-green accent-4</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle lime lighten-5"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#f9fbe7 lime lighten-5</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle lime lighten-4"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#f0f4c3 lime lighten-4</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle lime lighten-3"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#e6ee9c lime lighten-3</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle lime lighten-2"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#dce775 lime lighten-2</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle lime lighten-1"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#d4e157 lime lighten-1</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle lime"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#cddc39 lime</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle lime darken-1"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#c0ca33 lime darken-1</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle lime darken-2"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#afb42b lime darken-2</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle lime darken-3"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#9e9d24 lime darken-3</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle lime darken-4"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#827717 lime darken-4</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle lime accent-1"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#f4ff81 lime accent-1</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle lime accent-2"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#eeff41 lime accent-2</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle lime accent-3"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#c6ff00 lime accent-3</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle lime accent-4"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#aeea00 lime accent-4</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle yellow lighten-5"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#fffde7 yellow lighten-5</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle yellow lighten-4"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#fff9c4 yellow lighten-4</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle yellow lighten-3"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#fff59d yellow lighten-3</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle yellow lighten-2"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#fff176 yellow lighten-2</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle yellow lighten-1"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#ffee58 yellow lighten-1</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle yellow"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#ffeb3b yellow</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle yellow darken-1"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#fdd835 yellow darken-1</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle yellow darken-2"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#fbc02d yellow darken-2</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle yellow darken-3"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#f9a825 yellow darken-3</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle yellow darken-4"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#f57f17 yellow darken-4</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle yellow accent-1"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#ffff8d yellow accent-1</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle yellow accent-2"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#ffff00 yellow accent-2</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle yellow accent-3"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#ffea00 yellow accent-3</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle yellow accent-4"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#ffd600 yellow accent-4</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle amber lighten-5"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#fff8e1 amber lighten-5</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle amber lighten-4"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#ffecb3 amber lighten-4</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle amber lighten-3"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#ffe082 amber lighten-3</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle amber lighten-2"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#ffd54f amber lighten-2</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle amber lighten-1"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#ffca28 amber lighten-1</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle amber"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#ffc107 amber</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle amber darken-1"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#ffb300 amber darken-1</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle amber darken-2"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#ffa000 amber darken-2</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle amber darken-3"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#ff8f00 amber darken-3</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle amber darken-4"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#ff6f00 amber darken-4</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle amber accent-1"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#ffe57f amber accent-1</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle amber accent-2"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#ffd740 amber accent-2</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle amber accent-3"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#ffc400 amber accent-3</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle amber accent-4"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#ffab00 amber accent-4</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle orange lighten-5"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#fff3e0 orange lighten-5</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle orange lighten-4"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#ffe0b2 orange lighten-4</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle orange lighten-3"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#ffcc80 orange lighten-3</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle orange lighten-2"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#ffb74d orange lighten-2</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle orange lighten-1"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#ffa726 orange lighten-1</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle orange"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#ff9800 orange</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle orange darken-1"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#fb8c00 orange darken-1</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle orange darken-2"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#f57c00 orange darken-2</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle orange darken-3"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#ef6c00 orange darken-3</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle orange darken-4"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#e65100 orange darken-4</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle orange accent-1"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#ffd180 orange accent-1</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle orange accent-2"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#ffab40 orange accent-2</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle orange accent-3"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#ff9100 orange accent-3</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle orange accent-4"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#ff6d00 orange accent-4</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle deep-orange lighten-5"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#fbe9e7 deep-orange lighten-5</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle deep-orange lighten-4"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#ffccbc deep-orange lighten-4</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle deep-orange lighten-3"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#ffab91 deep-orange lighten-3</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle deep-orange lighten-2"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#ff8a65 deep-orange lighten-2</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle deep-orange lighten-1"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#ff7043 deep-orange lighten-1</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle deep-orange"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#ff5722 deep-orange</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle deep-orange darken-1"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#f4511e deep-orange darken-1</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle deep-orange darken-2"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#e64a19 deep-orange darken-2</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle deep-orange darken-3"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#d84315 deep-orange darken-3</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle deep-orange darken-4"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#bf360c deep-orange darken-4</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle deep-orange accent-1"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#ff9e80 deep-orange accent-1</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle deep-orange accent-2"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#ff6e40 deep-orange accent-2</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle deep-orange accent-3"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#ff3d00 deep-orange accent-3</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle deep-orange accent-4"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#dd2c00 deep-orange accent-4</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle brown lighten-5"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#efebe9 brown lighten-5</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle brown lighten-4"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#d7ccc8 brown lighten-4</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle brown lighten-3"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#bcaaa4 brown lighten-3</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle brown lighten-2"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#a1887f brown lighten-2</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle brown lighten-1"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#8d6e63 brown lighten-1</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle brown"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#795548 brown</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle brown darken-1"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#6d4c41 brown darken-1</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle brown darken-2"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#5d4037 brown darken-2</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle brown darken-3"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#4e342e brown darken-3</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle brown darken-4"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#3e2723 brown darken-4</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle grey lighten-5"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#fafafa grey lighten-5</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle grey lighten-4"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#f5f5f5 grey lighten-4</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle grey lighten-3"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#eeeeee grey lighten-3</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle grey lighten-2"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#e0e0e0 grey lighten-2</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle grey lighten-1"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#bdbdbd grey lighten-1</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle grey"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#9e9e9e grey</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle grey darken-1"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#757575 grey darken-1</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle grey darken-2"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#616161 grey darken-2</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle grey darken-3"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#424242 grey darken-3</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-1 col-3">
+                    <div class="card no-b p-3">
+                        <div>
+                            <div class="mr-3 float-left">
+                                <span class="icon-box-md circle grey darken-4"></span>
+                            </div>
+                            <div>
+                                <div>
+                                    <strong>#212121 grey darken-4</strong>
+                                </div>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+          <!-- Control Sidebar -->
+          <aside class="control-sidebar fixed white">
+                <ul class="nav nav-tabs  nav-material" id="myTab2" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="home-tab2" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-expanded="true"><i class="icon-cogs"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="profile-tab2" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"><i class="icon-cogs"></i></a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent2">
+                    <div role="tabpanel" class="tab-pane fade show active" id="home" aria-labelledby="home-tab">
+                      <!-- Big Heading -->
+                      <div class="text-center">
+                            <h3 class="my-3">$25,000</h3>
+                            <i class="icon-angle-double-up yellow icon-box-md cirlce"></i>
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <p>
+                                    <i class="icon-circle-o text-red mr-2"></i>Sales</p>
+
+                                <p>
+                                    <i class="icon-circle-o text-green mr-2"></i>Last Month</p>
+
+                            </div>
+                            <div>
+                                <p>
+                                    <i class="icon-angle-double-down text-red mr-2"></i>1,4,348</p>
+
+
+                                <p>
+                                    <i class="icon-angle-double-up text-green mr-2"></i>1,11,5</p>
+                            </div>
+                        </div>
+                                    <div >
+                                        <div class="my-3">
+                                            <small>25% Complete</small>
+                                                <div class="progress" style="height: 3px;">
+                                                    <div class="progress-bar bg-success" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                        </div>
+                                        <div class="my-3">
+                                            <small>45% Complete</small>
+                                            <div class="progress" style="height: 3px;">
+                                                <div class="progress-bar bg-info" role="progressbar" style="width: 45%;" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                        <div class="my-3">
+                                            <small>60% Complete</small>
+                                            <div class="progress" style="height: 3px;">
+                                                <div class="progress-bar bg-warning" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                        <div class="my-3">
+                                            <small>75% Complete</small>
+                                            <div class="progress" style="height: 3px;">
+                                                <div class="progress-bar bg-danger" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                        <div class="my-3">
+                                                <small>100% Complete</small>
+                                                <div class="progress" style="height: 3px;">
+                                                    <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                
+                                    </div>
+                                
+                    </div>
+                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            <ul class="list-group no-b">
+                                    <li class="my-3 d-flex justify-content-between align-items-center">
+                                           <div> <i class="icon-wifi text-blue"></i>Wifi</div>
+                                           <div class="material-switch">
+                                                <input id="someSwitchOptionDefault1" name="someSwitchOption001" checked="true" type="checkbox"/>
+                                                <label for="someSwitchOptionDefault1" class="bg-primary"></label>
+                                            </div>
+                                    </li>
+                                    <li class="my-3 d-flex justify-content-between align-items-center">
+                                            <div><i class="icon-cogs text-blue"></i>Email</div>
+                                            <div class="material-switch">
+                                                    <input id="someSwitchOptionDefault2" name="someSwitchOption001" checked="true" type="checkbox"/>
+                                                    <label for="someSwitchOptionDefault2" class="bg-secondary"></label>
+                                                </div>
+                                    </li>
+                                    <li class="my-3 d-flex justify-content-between align-items-center">
+                                          <div>  <i class="icon-wifi text-blue"></i> Password</div>
+                                          <div class="material-switch">
+                                                <input id="someSwitchOptionDefault3" name="someSwitchOption001"  checked="true" type="checkbox"/>
+                                                <label for="someSwitchOptionDefault3" class="bg-danger"></label>
+                                            </div>
+                                    </li>
+                                    <li class="my-3 d-flex justify-content-between align-items-center">
+                                            <div>  <i class="icon-wifi text-blue"></i> Password</div>
+                                            <div class="material-switch">
+                                                    <input id="someSwitchOptionDefault4" name="someSwitchOption001" checked="true" type="checkbox"/>
+                                                    <label for="someSwitchOptionDefault4" class="bg-warning"></label>
+                                                </div>
+                                      </li>
+                                      <li class="my-3 d-flex justify-content-between align-items-center">
+                                            <div>  <i class="icon-wifi text-blue"></i> Password</div>
+                                            <div class="material-switch">
+                                                    <input id="someSwitchOptionDefault5" name="someSwitchOption001"  checked="true" type="checkbox"/>
+                                                    <label for="someSwitchOptionDefault5" class="bg-default"></label>
+                                                </div>
+                                      </li>
+                                  </ul>
+                    </div>
+                    <div class="tab-pane fade" id="dropdown12" role="tabpanel" aria-labelledby="dropdown1-tab">
+                    
+                    </div>
+                
+                </div>
+         </aside>
+        <!-- /.control-sidebar -->
+        <!-- Add the sidebar's background. This div must be placed
+                 immediately after the control sidebar -->
+        <div class="control-sidebar-bg shadow white fixed"></div>
+</div>
+<!--End Page paper-loading -->
+<script src="assets/js/panel.js"></script>
+</body>
+</html>

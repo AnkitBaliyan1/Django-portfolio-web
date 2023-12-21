@@ -1,0 +1,6 @@
+Kindly check documentations.html in app/dist folder for help.
+
+
+For online docs visit
+
+http://xvelopers.com/html/paper/documentations.html

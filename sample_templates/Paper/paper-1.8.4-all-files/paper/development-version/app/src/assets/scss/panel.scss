@@ -1,0 +1,102 @@
+//Core Or Common SCSS both for front end and panel
+
+@import "../scss/common";
+// Trumbowyg Editor
+@import "../../../../node_modules/trumbowyg/dist/ui/trumbowyg.min";
+// Morris Charts
+@import "../../../../node_modules/morris-js-module/morris";
+// Dropzone File Uploader
+@import "../../../../node_modules/dropzone/dist/dropzone";
+// Date Time Picker
+@import "../../../../node_modules/jquery-datetimepicker/jquery.datetimepicker";
+// Full Calendar
+@import "../../../../node_modules/fullcalendar/dist/fullcalendar";
+// Color Picker
+@import "../../../../node_modules/bootstrap-colorpicker/dist/css/bootstrap-colorpicker";
+// Range Slider
+@import "../../../../node_modules/ion-rangeslider/css/ion.rangeSlider";
+// @import "../../../../node_modules/ion-rangeslider/css/ion.rangeSlider.skinFlat";
+// Stepper
+@import "panel/stepper";
+// Toast
+@import "../../../../node_modules/toastr/toastr";
+// Avatar Placeholder
+@import "libs/letters";
+
+@import "panel/variables";
+@import "panel/bootstrap-tagsinput";
+@import "panel/select2";
+@import "panel/nav";
+@import "panel/control-sidebar";
+@import "panel/chat";
+@import "panel/todo";
+@import "panel/timeline";
+@import "panel/preloaders";
+@import "panel/activity";
+
+
+
+
+
+//Plugins Override
+
+//Dropzone
+.dropzone{
+  border: 2px dashed $brand-border;
+}
+//color Picker
+.colorpicker{
+    border: 1px solid $brand-border;
+}
+
+
+
+.material-switch > {
+  input[type="checkbox"] {
+    display: none;
+  }
+  label {
+    cursor: pointer;
+    height: 0px;
+    position: relative;
+    width: 40px;
+    &::before {
+      background: rgb(0, 0, 0);
+      box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+      border-radius: 8px;
+      content: '';
+      height: 16px;
+      margin-top: -8px;
+      position: absolute;
+      opacity: 0.3;
+      transition: all 0.4s ease-in-out;
+      width: 40px;
+    }
+    &::after {
+      background: rgb(255, 255, 255);
+      border-radius: 16px;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+      content: '';
+      height: 24px;
+      left: -4px;
+      margin-top: -8px;
+      position: absolute;
+      top: -4px;
+      transition: all 0.3s ease-in-out;
+      width: 24px;
+    }
+  }
+  input[type="checkbox"]:checked + label {
+    &::before {
+      background: inherit;
+      opacity: 0.5;
+    }
+    &::after {
+      background: inherit;
+      left: 20px;
+    }
+  }
+}
+
+
+

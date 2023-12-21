@@ -1,0 +1,328 @@
+<!-- partial:panel-partials/_head.html -->
+<!-- partial -->
+<div class="sidebar-collapse">
+    <!-- partial:panel-partials/_sidebar.html -->
+    <!-- partial -->
+</div>
+<!-- partial:panel-partials/_searchBar.html -->
+<!-- partial -->
+
+
+<div class="page light">
+    <header class="blue accent-3 relative nav-sticky">
+
+        <div class="navbar navbar-expand navbar-dark d-flex justify-content-between bd-navbar">
+            <div class="relative">
+                <a href="#" data-toggle="offcanvas" class="paper-nav-toggle pp-nav-toggle paper-nav-white">
+                    <i></i>
+                </a>
+            </div>
+            <!-- partial:panel-partials/_navbar.html -->
+            <!-- partial -->
+        </div>
+
+        <div class="container text-white">
+            <div class="my-3">
+                <h4>
+                    <i class="icon-box"></i>
+                    Dashboard
+                </h4>
+            </div>
+            <div>
+                <ul class="nav responsive-tab nav-material nav-material-white" id="v-pills-tab" role="tablist">
+                    <li>
+                        <a class="nav-link active pl-0" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1"
+                           role="tab" aria-controls="v-pills-1">Bitcoin</a>
+                    </li>
+                    <li>
+                        <a class="nav-link pl-0" id="v-pills-2-tab" data-toggle="pill" href="#v-pills-2" role="tab"
+                           aria-controls="v-pills-2">Ethereum</a>
+                    </li>
+                    <li>
+                        <a class="nav-link pl-0" id="v-pills-3-tab" data-toggle="pill" href="#v-pills-3" role="tab"
+                           aria-controls="v-pills-3">Litecoin</a>
+                    </li>
+                </ul>
+                <a class="btn-fab fab-right btn-primary" data-toggle="control-sidebar">
+                    <i class="icon icon-menu"></i>
+                </a>
+            </div>
+        </div>
+
+    </header>
+    <div class="container relative animatedParent animateOnce">
+        <div class="tab-content pb-3" id="v-pills-tabContent">
+            <!--Today Tab Start-->
+            <div class="tab-pane animated fadeInUpShort show active" id="v-pills-1" role="tabpanel"
+                 aria-labelledby="v-pills-1-tab">
+                <div class="row my-3">
+                    <div class="col-md-12">
+                        <div class="card">
+                           <div class="card-body p-0">
+                               <div class="row text-center">
+                                   <div class="col-md-4 my-3 mt-4">
+                                       <h5>Sales <span class="red-text">+203.48</span></h5>
+                                       <span class="s-24">$2652.07</span>
+                                   </div>
+
+                                   <div class="col-md-4 b-r">
+                                       <div class="p-3">
+                                           <h5>Net Sales</h5>
+                                           <span class="s-24">$2351.08 </span>
+                                       </div>
+
+                                   </div>
+                                   <div class="col-md-4">
+                                       <div class="">
+                                           <h5>Costs <span class="amber-text">+87.4</span></h5>
+                                           <span class="s-24">$900.09</span>
+                                       </div>
+                                   </div>
+                               </div>
+                               <div class="" style="height: 350px">
+                                   <canvas data-chart="line" data-dataset="[
+                                                    [8449.835, 8138.3363,
+                                       7790.1575,
+                                        7937.205,
+                                       7086.4875,
+                                         6844.3213,
+                                        6926.0175,
+                                        6816.74,
+                                         7049.7938,
+                                         7417.8875,
+                                         6789.3013,
+                                         6774.7513,
+                                         6620.4088,
+                                         6896.2813,
+                                         7022.7088,
+                                       6773.9388,
+                                         6830.9038,
+                                         6939.55,
+                                         7916.3725,
+                                         7889.2313,
+                                        8003.6813,
+                                        8357.0375,
+                                        8051.345,
+                                        7890.15,
+                                      8163.69,
+                                       8273.7413,
+                                        8863.5025,
+                                        8917.5963,
+                                         8792.83,
+                                         8938.3038,
+                                         9652.1563],
+
+
+                                                    ]"
+                                           data-labels="['A', 'B', 'C', 'D', 'E', 'F','A', 'B', 'C', 'D', 'E', 'F','A', 'B', 'C', 'D', 'E', 'F','A', 'B', 'C', 'D', 'E', 'F','A', 'B', 'C', 'D', 'E', 'F']"
+                                           data-dataset-options="[
+                                                    {   label:'HTML',
+                                                        fill: true,
+                                                        backgroundColor: 'rgba(149,117,205,0.2)',
+                                                        borderColor: 'rgba(149,117,205,1)',
+
+
+
+                                                    },
+
+                                                    ]"
+                                           data-options="{
+                                                            maintainAspectRatio: false,
+                                                            legend: {
+                                                                display: true
+
+                                                            },
+
+                                                            scales: {
+                                                                xAxes: [{
+                                                                    display: false,
+                                                                    gridLines: {
+                                                                        zeroLineColor: '#eee',
+                                                                        color: '#eee',
+  ticks: {
+                                                                                fontColor: 'rgba(255,255,255,0.5)',
+                                                                                stepSize: 20000,
+
+                                                                            },
+                                                                        borderDash: [5, 5],
+                                                                    }
+                                                                }],
+                                                                yAxes: [{
+                                                                    display: true,
+                                                                          ticks: {
+
+                                                                                stepSize: 10000,
+
+                                                                            },
+                                                                    gridLines: {
+
+                                                                        zeroLineColor: '#eee',
+                                                                        color: '#eee',
+                                                                         stepSize: 20000,
+                                                                        borderDash: [5, 5],
+                                                                    }
+                                                                }]
+
+                                                            },
+                                                            elements: {
+                                                                line: {
+
+
+                                                                    borderWidth: 1
+                                                                },
+                                                                point: {
+                                                                display: false,
+                                                                    radius: 2,
+                                                                    hitRadius: 10,
+                                                                    hoverRadius: 6,
+                                                                    borderWidth: 4
+                                                                }
+                                                            }
+                                                        }">
+                                   </canvas>
+                               </div>
+                           </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!--Today Tab End-->
+
+            <!--Yesterday Tab Start-->
+            <div class="tab-pane animated fadeInUpShort" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-2-tab">
+                <div class="row my-3">
+                    <div class="col-lg-3">
+                        <div class="counter-box white r-5 p-3">
+                            <div class="p-4">
+                                <div class="float-right">
+                                    <span class="icon icon-note-list text-light-blue s-48"></span>
+                                </div>
+                                <div class="counter-title">Web Projects</div>
+                                <h5 class="sc-counter mt-3">3000</h5>
+                            </div>
+                            <div class="progress progress-xs r-0">
+                                <div class="progress-bar bg-warning" role="progressbar" style="width: 25%;"
+                                     aria-valuenow="25" aria-valuemin="0" aria-valuemax="128"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="counter-box white r-5 p-3">
+                            <div class="p-4">
+                                <div class="float-right">
+                                    <span class="icon icon-mail-envelope-open s-48"></span>
+                                </div>
+                                <div class="counter-title ">Premium Themes</div>
+                                <h5 class="sc-counter mt-3">1000</h5>
+                            </div>
+                            <div class="progress progress-xs r-0">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 50%;"
+                                     aria-valuenow="25" aria-valuemin="0" aria-valuemax="128"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="counter-box white r-5 p-3">
+                            <div class="p-4">
+                                <div class="float-right">
+                                    <span class="icon icon-stop-watch3 s-48"></span>
+                                </div>
+                                <div class="counter-title">Support Requests</div>
+                                <h5 class="sc-counter mt-3">600</h5>
+                            </div>
+                            <div class="progress progress-xs r-0">
+                                <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="25"
+                                     aria-valuemin="0" aria-valuemax="128"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="counter-box white r-5 p-3">
+                            <div class="p-4">
+                                <div class="float-right">
+                                    <span class="icon icon-inbox-document-text s-48"></span>
+                                </div>
+                                <div class="counter-title">Support Requests</div>
+                                <h5 class="sc-counter mt-3">525</h5>
+                            </div>
+                            <div class="progress progress-xs r-0">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 25%;"
+                                     aria-valuenow="25" aria-valuemin="0" aria-valuemax="128"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row my-3">
+                    <div class="col-md-12">
+                        <div class="white p-5 r-5">
+                            <div c style="height: 528px">
+                                <canvas
+                                        data-chart="line"
+                                        data-dataset="[
+                                                        [0,528,228,728,528,1628,0],
+                                                        [0,628,228,1228,428,1828,0],
+                                                        ]"
+                                        data-labels="['Blue','Yellow','Green','Purple','Orange','Red','Indigo']"
+                                        data-dataset-options="[
+                                                    { label:'Sales', borderColor:  'rgba(54, 162, 235, 1)', backgroundColor: 'rgba(54, 162, 235,1)'},
+                                                    { label:'Orders', borderColor:  'rgba(255,99,132,1)', backgroundColor: 'rgba(255, 99, 132, 1)' }]"
+                                        data-options="{
+                                                        maintainAspectRatio: false,
+                                                        legend: {
+                                                            display: true
+                                                        },
+                                            
+                                                        scales: {
+                                                            xAxes: [{
+                                                                display: true,
+                                                                gridLines: {
+                                                                    zeroLineColor: '#eee',
+                                                                    color: '#eee',
+                                                              
+                                                                    borderDash: [5, 5],
+                                                                }
+                                                            }],
+                                                            yAxes: [{
+                                                                display: true,
+                                                                gridLines: {
+                                                                    zeroLineColor: '#eee',
+                                                                    color: '#eee',
+                                                                    borderDash: [5, 5],
+                                                                }
+                                                            }]
+                                            
+                                                        },
+                                                        elements: {
+                                                            line: {
+                                                            
+                                                                tension: 0.4,
+                                                                borderWidth: 1
+                                                            },
+                                                            point: {
+                                                                radius: 2,
+                                                                hitRadius: 10,
+                                                                hoverRadius: 6,
+                                                                borderWidth: 4
+                                                            }
+                                                        }
+                                                    }">
+
+                                </canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Yesterday Tab Start-->
+
+            <!--Yesterday Tab Start-->
+            <div class="tab-pane animated fadeInUpShort" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-3-tab">
+
+            </div>
+            <!--Yesterday Tab Start-->
+        </div>
+    </div>
+</div>
+<!-- partial:panel-partials/_foot.html -->
+<!-- partial -->

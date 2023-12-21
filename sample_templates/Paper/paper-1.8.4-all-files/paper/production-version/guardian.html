@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="assets/img/basic/favicon.ico" type="image/x-icon">
+    <title>Paper</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/panel.css">
+    <style>
+        .loader {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #F5F8FA;
+            z-index: 9998;
+            text-align: center;
+        }
+
+        .plane-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+    </style>
+</head>
+<body>
+<!-- Pre loader -->
+<div id="loader" class="loader">
+    <div class="plane-container">
+        <div class="preloader-wrapper small active">
+            <div class="spinner-layer spinner-blue">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div><div class="gap-patch">
+                <div class="circle"></div>
+            </div><div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+            </div>
+
+            <div class="spinner-layer spinner-red">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div><div class="gap-patch">
+                <div class="circle"></div>
+            </div><div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+            </div>
+
+            <div class="spinner-layer spinner-yellow">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div><div class="gap-patch">
+                <div class="circle"></div>
+            </div><div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+            </div>
+
+            <div class="spinner-layer spinner-green">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div><div class="gap-patch">
+                <div class="circle"></div>
+            </div><div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="app" class="paper-loading">
+
+<div class="page light offcanvas-page  height-full">
+    <header class="blue accent-3 relative">
+        <div class="container-fluid text-white">
+            <div class="row p-t-b-10 ">
+                <div class="col">
+                    <h4>
+                        <i class="icon-database"></i>
+                        Students
+                    </h4>
+                </div>
+            </div>
+            <div class="row justify-content-between">
+                <ul class="nav" id="v-pills-tab" role="tablist">
+                    <li>
+                        <a class="nav-link active" id="v-pills-all-tab" data-toggle="pill" href="#v-pills-all"
+                           role="tab" aria-controls="v-pills-all"><i class="icon-home2"></i>All Students</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" id="v-pills-add-tab" data-toggle="pill" href="#v-pills-add" role="tab"
+                           aria-controls="v-pills-add"><i class="icon-plus-circle"></i> Add New User</a>
+                    </li>
+                </ul>
+                <div class="col offset-8">
+                    <input class="form-control form-control-sm b-0 r-0" placeholder="Search User" id="inputSmall"
+                           type="text">
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <div class="tab-content pt-3 pb-3" id="v-pills-tabContent">
+            <div class="tab-pane fade show active" id="v-pills-all" role="tabpanel" aria-labelledby="v-pills-all-tab">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card no-b shadow">
+                            <div class="collapse show" id="salesCard">
+                                <div class="card-body p-0">
+                                    <form action="">
+
+                                        <div class="table-responsive">
+                                            <table class="table table-hover ">
+                                                <tbody>
+                                                <tr>
+                                                    <th class="no-b">
+                                                        <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" id="checkedAll" class="custom-control-input"><label
+                                                            class="custom-control-label" for="checkedAll"></label>
+                                                         </div>
+                                                    </th>
+                                                    <th class="no-b s-12">Roll Number</th>
+                                                    <th class="no-b s-12">Student</th>
+                                                    <th class="no-b s-12">Class</th>
+                                                    <th class="no-b s-12">Section</th>
+                                                    <th class="no-b s-12">Guardian Name</th>
+                                                    <th class="no-b s-12">Phone</th>
+                                                    <th class="no-b s-12">Email</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input checkSingle"
+                                                                   id="user_id_1" required><label
+                                                                class="custom-control-label" for="user_id_1"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>#1268</td>
+                                                    <td>
+                                                        <img class="w-30px mr-3" src="assets/img/dummy/u1.png" alt="">
+                                                        <strong>Joe Doe</strong>
+                                                    </td>
+                                                    <td>2</td>
+                                                    <td>A</td>
+                                                    <td>Sara Dow</td>
+                                                    <td>+92 333 123 136</td>
+                                                    <td>user@email.com</td>
+                                                    <td><span class="r-3 badge badge-success"><i class="icon-award"></i></span></td>
+                                                    <td>
+                                                        <a href="panel-profile.html"><i class="icon-eye"></i></a>
+                                                        <a href="panel-profile.html"><i class="icon-pencil"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input checkSingle"
+                                                                   id="user_id_2" required><label
+                                                                class="custom-control-label" for="user_id_2"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>#1268</td>
+                                                    <td>
+                                                        <img class="w-30px mr-3" src="assets/img/dummy/u2.png" alt="">
+                                                        <strong>Joe Doe</strong>
+                                                    </td>
+                                                    <td>2</td>
+                                                    <td>A</td>
+                                                    <td>Sara Dow</td>
+                                                    <td>+92 333 123 136</td>
+                                                    <td>user@email.com</td>
+                                                    <td><span class="r-3 badge badge-success"><i class="icon-award"></i></span></td>
+                                                    <td>
+                                                        <a href="panel-profile.html"><i class="icon-eye"></i></a>
+                                                        <a href="panel-profile.html"><i class="icon-pencil"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input checkSingle"
+                                                                   id="user_id_3" required><label
+                                                                class="custom-control-label" for="user_id_3"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>#1268</td>
+                                                    <td>
+                                                        <img class="w-30px mr-3" src="assets/img/dummy/u3.png" alt="">
+                                                        <strong>Joe Doe</strong>
+                                                    </td>
+                                                    <td>2</td>
+                                                    <td>A</td>
+                                                    <td>Sara Dow</td>
+                                                    <td>+92 333 123 136</td>
+                                                    <td>user@email.com</td>
+                                                    <td><span class="r-3 badge badge-success"><i class="icon-award"></i></span></td>
+                                                    <td>
+                                                        <a href="panel-profile.html"><i class="icon-eye"></i></a>
+                                                        <a href="panel-profile.html"><i class="icon-pencil"></i></a>
+                                                    </td>
+                                                </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <nav class="pt-3" aria-label="Page navigation">
+                    <ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="#">Previous</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">2</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">3</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">Next</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="tab-pane fade" id="v-pills-add" role="tabpanel" aria-labelledby="v-pills-add-tab">
+                <div class="row">
+                    <div class="col-md-8">
+                        <form>
+                           <div class="card no-b shadow">
+                               <div class="card-body">
+                                   <h5 class="card-title">About Student</h5>
+                                   <div class="form-row">
+                                    <div class="form-group col-6 m-0">
+                                        <label for="name" class="col-form-label s-12">STUDENT NAME</label>
+                                        <input id="name" placeholder="Enter Student Name" class="form-control r-0 light s-12 " type="text">
+                                    </div>
+
+                                    <div class="form-group col-6 m-0">
+                                        <label for="dob" class="col-form-label s-12"><i class="icon-calendar mr-2"></i>DATE OF BIRTH</label>
+                                        <input id="dob" placeholder="Select Date of Birth" class="form-control r-0 light s-12 date-picker" type="text">
+                                    </div>
+                                </div>
+                                   <div class="form-row">
+                                       <div class="form-group col-4 m-0">
+                                           <label for="email" class="col-form-label s-12"><i class="icon-envelope-o mr-2"></i>Email</label>
+                                           <input id="email" placeholder="student@email.com" class="form-control r-0 light s-12 " type="text">
+                                       </div>
+
+                                       <div class="form-group col-4 m-0">
+                                           <label for="phone" class="col-form-label s-12"><i class="icon-phone mr-2"></i>Phone</label>
+                                           <input id="phone" placeholder="05112345678" class="form-control r-0 light s-12 " type="text">
+                                       </div>
+                                       <div class="form-group col-4 m-0">
+                                           <label for="mobile" class="col-form-label s-12"><i class="icon-mobile-phone mr-2"></i>Mobile</label>
+                                           <input id="mobile" placeholder="eg: 3334709643" class="form-control r-0 light s-12 " type="text">
+                                       </div>
+                                   </div>
+                                   <div class="form-row">
+                                       <div class="form-group col-9 m-0">
+                                           <label for="address"  class="col-form-label s-12">Address</label>
+                                           <input type="text" class="form-control r-0 light s-12" id="address"
+                                                  placeholder="Enter Address">
+                                       </div>
+
+                                       <div class="form-group col-3 m-0">
+                                           <label for="inputCity" class="col-form-label s-12">City</label>
+                                           <input type="text" class="form-control r-0 light s-12" id="inputCity">
+                                       </div>
+                                   </div>
+                               </div>
+                               <hr>
+                               <div class="card-body">
+                                   <h5 class="card-title">ENROLLMENT</h5>
+                                   <div class="form-row">
+                                       <div class="form-group col-5 m-0">
+                                           <label for="roll" class="col-form-label s-12"># ROLL / REGISTRATION NUMBER</label>
+                                           <input id="roll" placeholder="Enter Student Roll Number" class="form-control r-0 light s-12 " type="text">
+                                       </div>
+                                       <div class="form-group col-4 m-0">
+                                           <label for="roll" class="col-form-label s-12">CLASS</label>
+                                           <input id="roll" placeholder="Select Class" class="form-control r-0 light s-12 " type="text">
+                                       </div>
+                                       <div class="form-group col-2 m-0">
+                                           <label for="roll" class="col-form-label s-12">SECTION</label>
+                                           <input id="roll" placeholder="Select Class" class="form-control r-0 light s-12 " type="text">
+                                       </div>
+                                   </div>
+
+                                   <div class="form-row">
+                                       <div class="form-group col-4 m-0">
+                                           <label for="email" class="col-form-label s-12"><i class="icon-calendar mr-2"></i>DATE OF JOINING</label>
+                                           <input id="email" placeholder="student@email.com" class="form-control r-0 light s-12 date-picker" type="text">
+                                       </div>
+                                   </div>
+                               </div>
+                               <hr>
+                               <div class="card-body">
+
+                                   <h5 class="card-title">PARENT / GUARDIAN</h5>
+                                   <div class="form-row">
+                                       <div class="form-group col-5 m-0">
+                                           <label for="roll" class="col-form-label s-12"># ROLL / REGISTRATION NUMBER</label>
+                                           <select class="select2 form-control r-0 light s-12 " name="state">
+                                               <option value="AL">Alabama</option>
+                                               <option value="WY">Wyoming</option>
+                                           </select>
+                                       </div>
+                                       <div class="form-group col-4 m-0">
+        <span>
+                                                <a href="#" class="btn btn-primary bg-primary btn-sm">Add New Guardian</a>
+                                           </span>
+                                       </div>
+                                   </div>
+
+                               </div>
+                           </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+          <!-- Control Sidebar -->
+          <aside class="control-sidebar fixed white">
+                <ul class="nav nav-tabs  nav-material" id="myTab2" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="home-tab2" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-expanded="true"><i class="icon-cogs"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="profile-tab2" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"><i class="icon-cogs"></i></a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent2">
+                    <div role="tabpanel" class="tab-pane fade show active" id="home" aria-labelledby="home-tab">
+                      <!-- Big Heading -->
+                      <div class="text-center">
+                            <h3 class="my-3">$25,000</h3>
+                            <i class="icon-angle-double-up yellow icon-box-md cirlce"></i>
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <p>
+                                    <i class="icon-circle-o text-red mr-2"></i>Sales</p>
+
+                                <p>
+                                    <i class="icon-circle-o text-green mr-2"></i>Last Month</p>
+
+                            </div>
+                            <div>
+                                <p>
+                                    <i class="icon-angle-double-down text-red mr-2"></i>1,4,348</p>
+
+
+                                <p>
+                                    <i class="icon-angle-double-up text-green mr-2"></i>1,11,5</p>
+                            </div>
+                        </div>
+                                    <div >
+                                        <div class="my-3">
+                                            <small>25% Complete</small>
+                                                <div class="progress" style="height: 3px;">
+                                                    <div class="progress-bar bg-success" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                        </div>
+                                        <div class="my-3">
+                                            <small>45% Complete</small>
+                                            <div class="progress" style="height: 3px;">
+                                                <div class="progress-bar bg-info" role="progressbar" style="width: 45%;" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                        <div class="my-3">
+                                            <small>60% Complete</small>
+                                            <div class="progress" style="height: 3px;">
+                                                <div class="progress-bar bg-warning" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                        <div class="my-3">
+                                            <small>75% Complete</small>
+                                            <div class="progress" style="height: 3px;">
+                                                <div class="progress-bar bg-danger" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                        <div class="my-3">
+                                                <small>100% Complete</small>
+                                                <div class="progress" style="height: 3px;">
+                                                    <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                
+                                    </div>
+                                
+                    </div>
+                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            <ul class="list-group no-b">
+                                    <li class="my-3 d-flex justify-content-between align-items-center">
+                                           <div> <i class="icon-wifi text-blue"></i>Wifi</div>
+                                           <div class="material-switch">
+                                                <input id="someSwitchOptionDefault1" name="someSwitchOption001" checked="true" type="checkbox"/>
+                                                <label for="someSwitchOptionDefault1" class="bg-primary"></label>
+                                            </div>
+                                    </li>
+                                    <li class="my-3 d-flex justify-content-between align-items-center">
+                                            <div><i class="icon-cogs text-blue"></i>Email</div>
+                                            <div class="material-switch">
+                                                    <input id="someSwitchOptionDefault2" name="someSwitchOption001" checked="true" type="checkbox"/>
+                                                    <label for="someSwitchOptionDefault2" class="bg-secondary"></label>
+                                                </div>
+                                    </li>
+                                    <li class="my-3 d-flex justify-content-between align-items-center">
+                                          <div>  <i class="icon-wifi text-blue"></i> Password</div>
+                                          <div class="material-switch">
+                                                <input id="someSwitchOptionDefault3" name="someSwitchOption001"  checked="true" type="checkbox"/>
+                                                <label for="someSwitchOptionDefault3" class="bg-danger"></label>
+                                            </div>
+                                    </li>
+                                    <li class="my-3 d-flex justify-content-between align-items-center">
+                                            <div>  <i class="icon-wifi text-blue"></i> Password</div>
+                                            <div class="material-switch">
+                                                    <input id="someSwitchOptionDefault4" name="someSwitchOption001" checked="true" type="checkbox"/>
+                                                    <label for="someSwitchOptionDefault4" class="bg-warning"></label>
+                                                </div>
+                                      </li>
+                                      <li class="my-3 d-flex justify-content-between align-items-center">
+                                            <div>  <i class="icon-wifi text-blue"></i> Password</div>
+                                            <div class="material-switch">
+                                                    <input id="someSwitchOptionDefault5" name="someSwitchOption001"  checked="true" type="checkbox"/>
+                                                    <label for="someSwitchOptionDefault5" class="bg-default"></label>
+                                                </div>
+                                      </li>
+                                  </ul>
+                    </div>
+                    <div class="tab-pane fade" id="dropdown12" role="tabpanel" aria-labelledby="dropdown1-tab">
+                    
+                    </div>
+                
+                </div>
+         </aside>
+        <!-- /.control-sidebar -->
+        <!-- Add the sidebar's background. This div must be placed
+                 immediately after the control sidebar -->
+        <div class="control-sidebar-bg shadow white fixed"></div>
+</div>
+<!--End Page paper-loading -->
+<script src="assets/js/panel.js"></script>
+</body>
+</html>

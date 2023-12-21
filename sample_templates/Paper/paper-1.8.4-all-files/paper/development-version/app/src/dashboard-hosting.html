@@ -1,0 +1,153 @@
+<!-- partial:panel-partials/_head.html -->
+<!-- partial -->
+
+
+<!-- partial:panel-partials/_sidebar3.html -->
+<!-- partial -->
+<div class="page light offcanvas-page">
+    <header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <h4>
+                        <i class="icon-box"></i>
+                        Dashboard
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid relative">
+            <div class="row my-3 no-gutters">
+                <div class="col-md-2  b-r">
+                    <div class="white text-center p-4">
+                            <h6 class="mb-3">Firewall</h6>
+                            <i class="icon-security s-48 text-success"></i>
+                            <div class="mt-3"><span class="badge badge-success r-30"><i class="icon-check mr-2"></i> Runing</span></div>
+                    </div>
+                </div>
+                <div class="col-md-2 b-r">
+                        <div class="white text-center p-4">
+                                <h6 class="mb-3">Backups</h6>
+                                <i class="icon-database s-48"></i>
+                                <div class="mt-3"><span class="badge badge-success r-30"><i class="icon-check mr-2"></i>Enabled</span></div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 b-r">
+                            <div class="white text-center p-4">
+                                    <h6 class="mb-3">Apache Server</h6>
+                                    <i class="icon-server s-48"></i>
+                                    <div class="mt-3"><span class="badge badge-danger r-30"><i class="icon-close mr-2"></i>Stopped</span></div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 b-r">
+                                <div class="white text-center p-4">
+                                        <h6 class="mb-3">FTP Server</h6>
+                                        <i class="icon-data_usage s-48"></i>
+                                        <div class="mt-3"><span class="badge badge-success r-30"><i class="icon-check mr-2"></i>Runing</span></div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 b-r">
+                                    <div class="white text-center p-4">
+                                            <h6 class="mb-3">My SQL</h6>
+                                            <i class="icon-terrain s-48"></i>
+                                            <div class="mt-3"><span class="badge badge-success r-30"><i class="icon-check mr-2"></i>Runing</span></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                        <div class="white text-center p-4">
+                                                <h6 class="mb-3">Mail Server</h6>
+                                                <i class="icon-chat s-48"></i>
+                                                <div class="mt-3"><span class="badge badge-warning r-30 "><i class="icon-exclamation-triangle mr-2"></i>Hold</span></div>
+                                        </div>
+                                    </div>
+                   
+               </div>
+        <div class="row">
+                <div class="col-md-9">
+                 
+                    </div>
+                   <!-- Progress Widget Start -->
+                   <div class="col-md-3">
+                      
+                       
+                        <div class="card">
+                                <div class="card-header white">
+                                        <h6> Usage </h6>
+                                    </div>
+                                <div class="p-5" style="height: 400px">
+                                        <canvas
+                                                data-chart="pie"
+                                                data-dataset="[
+                                                        [75, 50],
+                                                        [25, 50],
+                                                    ]"
+                                                data-labels="[['Disk'],['Database']]"
+                                                data-dataset-options="[
+                                                    {
+                                                        label: 'Disk',
+                                                        backgroundColor: [
+                                                            'rgba(255, 99, 132, 0.2)',
+                                                            'rgba(54, 162, 235, 0.2)',
+                                                        ],
+                                                        
+                                                    },
+                                                    {
+                                                        label: 'Database',
+                                                        backgroundColor: [
+                                                        'rgba(255, 206, 86, 0.2)',
+                                                        'rgba(75, 192, 192, 0.2)',
+                                                        ],
+                                                        
+                                                    },
+                                                 
+                                                    ]"
+                                                  
+                                        >
+                                        </canvas>
+                                    </div>
+                            <div class="card-header white">
+                                <h6> Progress </h6>
+                            </div>
+                            <div class="card-body pt-0">
+                                <div class="my-3">
+                                    <small>25% Complete</small>
+                                        <div class="progress" style="height: 3px;">
+                                            <div class="progress-bar bg-success" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                </div>
+                                <div class="my-3">
+                                    <small>45% Complete</small>
+                                    <div class="progress" style="height: 3px;">
+                                        <div class="progress-bar bg-info" role="progressbar" style="width: 45%;" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <div class="my-3">
+                                    <small>60% Complete</small>
+                                    <div class="progress" style="height: 3px;">
+                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <div class="my-3">
+                                    <small>75% Complete</small>
+                                    <div class="progress" style="height: 3px;">
+                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <div class="my-3">
+                                        <small>100% Complete</small>
+                                        <div class="progress" style="height: 3px;">
+                                            <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+        
+                            </div>
+                        </div>
+                    </div>
+                      <!-- Progress Widget End -->
+        </div>
+  
+    </div>
+</div>
+<!-- partial:panel-partials/_foot.html -->
+<!-- partial -->

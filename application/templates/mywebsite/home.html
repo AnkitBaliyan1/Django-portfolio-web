@@ -1,0 +1,51 @@
+{% extends "mywebsite/base.html" %}
+{% load static %}
+
+
+{% block content %}
+    <div class="container my-5">
+        <div class="row">
+            <!-- Text Column -->
+            <div class="col-xl-6 col-md-7 top-space">
+                <div class="row">
+                    <!-- Text Section 1 -->
+                    <div class="col-12 mb-3">
+                        <h1>Hello, I'm Ankit</h1>
+                    </div>
+
+                    <!-- Text Section 2 -->
+                    <div class="col-12 mb-3">
+                        <h2>Welcome to my website.</h2>
+                    </div>
+
+                    <!-- Text Section 3 with Animated Text -->
+                    <div class="col-12 mb-5 top-space">
+                        <h3>I hold expertise as...
+                            <div class="text-animation-container">
+                                <span class="animated-text">Data Analyst</span>
+                                <span class="animated-text">Data Scientist</span>
+                                <span class="animated-text">Machine Learning Engineer</span>
+                                <!-- Add more text elements as needed -->
+                            </div>
+                        </h3>
+                    </div>
+
+                    <!-- Download Button -->
+                    <div class="col-12">
+                        <a href="{% static 'resume/Ankit_Resume_.pdf' %}" class="btn btn-primary" download>Download Resume</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image Column -->
+            <div class="col-xl-6 col-md-5">
+                <div class="image-container">
+                    <img src="{% static 'images/myimage/main.png' %}" alt="My Image" style="width:100%; height:auto;">
+                </div>
+            </div>
+        </div>
+        <!-- Add more rows and columns as needed -->
+    </div>
+{% endblock %}
+
+
