@@ -1,0 +1,55 @@
+/* styles.css */
+body {
+    background-color: #879880; 
+}
+
+.text-content-border {
+    border: 5px solid #635757; /* Gray border */
+    padding: 15px; /* Internal spacing */
+    border-radius: 5px; /* Rounded corners */
+    text-align: center; /* Center aligns the text */
+    font-family: Arial, sans-serif; /* Example font */
+}
+
+
+
+.text-animation-container {
+    display: inline; /* Set to inline */
+    position: relative;
+    white-space: nowrap;
+}
+
+.animated-text {
+    position: absolute;
+    opacity: 0;
+    animation-name: fadeInOut;
+    animation-duration: 6s; /* 3 elements x 2s each */
+    animation-iteration-count: infinite;
+    color: red; /* Red text color */
+    font-weight: bold; /* Make text bold */
+}
+
+.animated-text:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.animated-text:nth-child(2) {
+    animation-delay: 2s; /* Starts after the first one finishes */
+}
+
+.animated-text:nth-child(3) {
+    animation-delay: 4s; /* Starts after the second one finishes */
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    17% { opacity: 1; } /* Fade in */
+    33% { opacity: 1; }
+    50% { opacity: 0; } /* Fade out */
+    100% { opacity: 0; }
+}
+
+.top-space {
+    /* padding-top: 100px; /* Adjust the value as needed */
+    margin-top: 100px; /* Adjust the value as needed */
+}
