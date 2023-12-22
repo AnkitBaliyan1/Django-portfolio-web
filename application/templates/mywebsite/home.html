@@ -32,7 +32,7 @@
 
                     <!-- Download Button -->
                     <div class="col-12">
-                        <a href="{% static 'resume/Ankit_Resume_.pdf' %}" class="btn btn-primary" download>Download Resume</a>
+                        <a href="{% static 'resume/Ankit_Resume.pdf' %}" class="btn btn-primary" download>Download Resume</a>
                     </div>
                 </div>
             </div>
@@ -40,11 +40,259 @@
             <!-- Image Column -->
             <div class="col-xl-6 col-md-5">
                 <div class="image-container">
-                    <img src="{% static 'images/myimage/main.png' %}" alt="My Image" style="width:100%; height:auto;">
+                    <img src="{% static 'images/myimage/main.png' %}" alt="My Image" style="width:90%; height:auto;">
                 </div>
             </div>
         </div>
         <!-- Add more rows and columns as needed -->
+
+        <!--About section-->
+        <section id="about">
+            <div class="container mt-5">
+                <div class="text-center mb-4">
+                    <h2>About Me</h2>
+                    <p>I'm an a Data enghusiast who love to play around with data and help in making data-driven decision making.</p>
+                </div>
+                <div class="row">
+                    <!-- Profile Image Column -->
+                    <div class="col-lg-4 col-md-5 d-flex align-items-center justify-content-center">
+                        <div class="profile-image-border">
+                            <img src="{% static 'images/myimage/profile.jpeg' %}" alt="Profile Picture" class="img-fluid" width="90%", height="80%">
+                        </div>
+                    </div>
+                    <!-- Basic Info Column -->
+                    <div class="col-lg-8 col-md-7">
+                        <div class="about-section">
+                            <p class="about-description">
+                                Adaptative professional with a fervent interest in Data Science, Machine Learning and Data Visualization, underpinned by a robust proficiency in Python and a talent for storytelling. I possess a quick-learning aptitude that consistently translates into exceeding performance benchmarks in diverse operational landscapes.
+                            </p>
+                            <div class="basic-info">
+                                <h3>Basic Info</h3>
+                                <p>Date Of Birth: 21 September 1996</p>
+                                <p>Email: a.baliyan008@gmail.com</p>
+                                <p>Website: <a href="mailto:a.baliyan008@gmail.com" target="_blank" class="custom-link-color">a.baliyan008@gmail.com</a></p>
+                                <p>Website: <a href="https://discoverankit.azurewebsites.net/" target="_blank" class="custom-link-color">https://discoverankit.azurewebsites.net/</a></p>
+                                <p>Phone No: + (91) 9958631596</p>
+                                <p>Address: Baghpat, Uttar Pradesh</p>
+                                <p>Freelance: Available</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!--Portfolio section-->
+        <section id="portfolio">
+            <div class="container my-5">
+                <div class="text-center mb-4">
+                    <h2>My Portfolio</h2>
+                    <p>Welcome to the showcase of innovation and creativity: a curated collection of my most impactful projects and endeavors.</p>
+                </div>
+                
+                <!--
+                    <div class="text-center mb-4">
+                    <button class="btn btn-outline-primary mx-1">All</button>
+                    <button class="btn btn-outline-primary mx-1">Machine Learning</button>
+                    <button class="btn btn-outline-primary mx-1">LLM</button>
+                    <button class="btn btn-outline-primary mx-1">PowerBI/Tableau Dashboard</button>
+                </div>
+            -->
+
+                <!-- First row of project cards -->
+                <div class="row mb-4">
+                    <!-- Project Card 1 -->
+                    <div class="col-md-4 mb-5 project-card">
+                        <div class="card">
+                            <!-- Upper Half with Image Placeholder -->
+                            <!--  You can place your image or placeholder here
+                                <div class="card-img-top" style="height: 50%;">
+                                
+                                
+                                </div>
+                            -->
+                            
+                            <!-- Bottom Half with Title, Description, and Button -->
+                            <div class="card-body">
+                                <h5 class="card-title">Project Title 1</h5>
+                                <p class="card-text">Description of the first project. Highlighting its features, benefits, and technological stack used.</p>
+                                <a href="#" class="btn btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Card 2 -->
+                    <div class="col-md-4 mb-5 project-card">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Project Title 2</h5>
+                                <p class="card-text">Description of the second project. Elaborate on the project's scope, challenges faced, and the solutions implemented.</p>
+                                <a href="#" class="btn btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Card 3 -->
+                    <div class="col-md-4 mb-5 project-card">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Project Title 3</h5>
+                                <p class="card-text">Insights into the third project. Discuss the impact, user feedback, and any awards or recognition received.</p>
+                                <a href="#" class="btn btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Second row of project cards -->
+                <div class="row">
+                    <!-- Project Card 4 -->
+                    <div class="col-md-4 mb-5 project-card">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Project Title 4</h5>
+                                <p class="card-text">Details about the fourth project. Describe its uniqueness, customer base, and market relevance.</p>
+                                <a href="#" class="btn btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Card 5 -->
+                    <div class="col-md-4 mb-5 project-card">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Project Title 5</h5>
+                                <p class="card-text">Summary of the fifth project. Highlight the collaborative aspects, team size, and any cross-functional integration.</p>
+                                <a href="#" class="btn btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Card 6 -->
+                    <div class="col-md-4 mb-5 project-card">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Project Title 6</h5>
+                                <p class="card-text">Exploration of the sixth project. Discuss the research, innovation, and long-term benefits of the project.</p>
+                                <a href="#" class="btn btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="custom-bar">
+                {{ bar_content |default:"A total of 45 projects completed till now." }}
+            </div>
+        </section>
+        <!-- End of Portfolio Section -->
+        
+
+        <!--Work Experience section-->
+        <section id="workexperience">
+            <div class="container my-5">
+                <div class="text-center mb-4">
+                    <h2>Work Experience</h2>
+                    <p>This is my professional work experience journey.</p>
+                </div>
+
+                <!-- First row of project cards -->
+                <div class="row mb-4">
+                    <!-- Project Card 1 -->
+                    <div class="col-md-4 mb-5 project-card">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Associate, CRC, Amazon</h5>
+                                <p class="card-text">Description of the first project. Highlighting its features, benefits, and technological stack used.</p>
+                                <a href="#" class="btn btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Card 2 -->
+                    <div class="col-md-4 mb-5 project-card">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Sr. Associate, CTK, Amazon</h5>
+                                <p class="card-text">Description of the second project. Elaborate on the project's scope, challenges faced, and the solutions implemented.</p>
+                                <a href="#" class="btn btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Card 3 -->
+                    <div class="col-md-4 mb-5 project-card">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Data Associate, AdSu, Amazon</h5>
+                                <p class="card-text">Insights into the third project. Discuss the impact, user feedback, and any awards or recognition received.</p>
+                                <a href="#" class="btn btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+
+            <div class="custom-bar">
+                {{ bar_content |default:"I have " }}{{ work_experience }}{{ bar_content |default:" of work experience in the field of Data Science." }}
+            </div>
+        </section>
+
+        <!-- ************ this is Academics *************** -->
+        <!-- Academics section-->
+        <section id="academics">
+            <div class="container my-5">
+                <div class="text-center mb-auto">
+                    <h2>Acdemics</h2>
+                    <p>This is my Academic journey.</p>
+                </div>
+
+                <div class="row mb-4">
+                    <!-- Project Card 1 -->
+                    <div class="col-md-4 mb-5 project-card">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title"> Indian Institute of Management</h4>
+                                <h6 class="card-subtitle mb-4 text-muted" style="color: #FFF; font-size: 19px; "> Integrated Program in Business Analytics </h6>
+                                <p class="card-text"style="color: #000;">Completed Post Graduation Certification into Business Analytics, where I fell in love with Data. I scored scored second highest in batch of 82.</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-4 mb-5 project-card">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title"> University of Delhi</h4>
+                                <h6 class="card-subtitle mb-4 text-muted" style="color: #FFF; font-size: 19px; "> B.Tech (Electronics) </h6>
+                                <p class="card-text" style="color: #000;">Completed my graduation from Acharya Narendra Dev College, with 72% academic score.</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-4 mb-5 project-card">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title"> Holy Child Academy </h4>
+                                <h6 class="card-subtitle mb-4 text-muted" style="color: #FFF; font-size: 19px; "> Intermediate </h6>
+                                <p class="card-text" style="color: #000;"> Scored 93.67% in PCM, with overall 90% academic scroe. School topper in Chemistry.</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+
+                    
+                  </div>
+
+                
+            </div>
+        </section>
+        
+
+        
+        
+
     </div>
 {% endblock %}
 
