@@ -13,4 +13,5 @@ urlpatterns = [
     path('bi-tools/',  views.bitools, name='bitools'),
     path('llm/',  views.llm, name='llm'),
     path('upcoming/',  views.upcoming, name='upcoming'),
+    path('contact/', views.contact_view, name='contact_view'),
 ]

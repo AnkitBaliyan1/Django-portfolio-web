@@ -1,5 +1,6 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponse, redirect
 from datetime import datetime
+from .forms import ContactForm
 
 # Create your views here.
 
@@ -42,3 +43,27 @@ def llm(request):
 
 def upcoming(request):
     return render(request, "mywebsite/upcoming.html")
+
+def contact(request):
+    pass
+
+def contact_view(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            # Process and save the form data
+            name = form.cleaned_data['name']
+            email = form.cleaned_data['email']
+            subject = form.cleaned_data['subject']
+            message = form.cleaned_data['message']
+            # Save the data to your data model or perform other actions
+            # ...
+
+            # Optionally, you can redirect the user to a success page
+            # after processing the form data
+            # return HttpResponseRedirect('/success/')
+
+    else:
+        form = ContactForm()
+
+    return render(request, 'mywebsite/contact.html', {'form': form})

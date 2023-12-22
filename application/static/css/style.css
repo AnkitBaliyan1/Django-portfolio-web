@@ -109,7 +109,7 @@ body {
     width: 18rem; /* Or any other width */
     
 }
-
+/* card   */
 .card {
     background-color: rgb(190, 124, 124); /* Nominal white background */
     border: 1px solid #ddd; /* Light border */
@@ -178,12 +178,12 @@ body {
 
 /* Style for the image placeholder */
 .image-placeholder {
-    height: 60%;
-    background-color: #333;
-    background-size: contain; /* Scale image to fit within the div */
-    background-repeat: no-repeat; /* Prevent repeating of small images */
-    background-position: center; /* Centers the image */
-}
+            height: 60%;
+            background-color: #333;
+            background-size: contain; /* Scale image to fit within the div */
+            background-repeat: no-repeat; /* Prevent repeating of small images */
+            background-position: center; /* Centers the image */
+        }
 
 .overflow-text {
     overflow: hidden;
@@ -193,9 +193,36 @@ body {
     -webkit-box-orient: vertical;
 }
 
+/* padding just above the section */
+.adjust-section
+{
+    padding-top: 70px
+}
+
 /* --------------------------------------------------    |
  |                                                       |
  |   Academics section formating starts from here        |
  |                                                       |
  | -------------------------------------------------- */
+
+
+
+/* Define the animation for sliding up */
+@keyframes slideUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+/* Apply the animation to specific sections */
+#about, #portfolio, #workexperience, #academics, #contact, #thankyou {
+    animation: SlideUP 2s ease-in-out;
+}
+
 

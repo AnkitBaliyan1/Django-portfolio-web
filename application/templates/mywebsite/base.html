@@ -11,7 +11,7 @@
 
     <style>
         /* Additional styling if needed */
-        body { padding-top: 56px; } /* Adjust this value if your navbar is a different height */
+        body { padding-top: 0px; } /* Adjust this value if your navbar is a different height */
     </style>
 </head>
 <body>
@@ -29,13 +29,13 @@
                 <a class="nav-link" href="/dashboard">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#about">About</a>
+                <a class="nav-link" href="/dashboard#about">About</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#portfolio">My Portfolio</a>
+                <a class="nav-link" href="/dashboard#portfolio">My Portfolio</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#academics">Academics</a>
+                <a class="nav-link" href="/dashboard#academics">Academics</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -51,6 +51,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'mywebsite:upcoming' %}">Upcoming Projects</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/dashboard#contact">Contact Me</a>
+            </li>
         </ul>
     </div>
 </nav>
@@ -61,6 +64,9 @@
 
 {% block footer %} <!-- Footer Block -->
 <!-- Optional Footer Content Here -->
+    <div class="text-center">
+        This website was developed by Ankit.
+    </div>
 {% endblock footer %}
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
