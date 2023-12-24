@@ -1,17 +1,17 @@
 /* styles.css */
-body {
-    background-color: #879880; 
-}
 
-.text-content-border {
-    border: 5px solid #635757; /* Gray border */
-    padding: 15px; /* Internal spacing */
-    border-radius: 5px; /* Rounded corners */
-    text-align: center; /* Center aligns the text */
+body {
+    background-color: #f5f5f5; /* Light gray background */
+    color: #333; /* Dark text color */
     font-family: Arial, sans-serif; /* Example font */
 }
 
-
+.text-content-border {
+    border: 5px solid #333; /* Dark gray border */
+    padding: 15px; /* Internal spacing */
+    border-radius: 5px; /* Rounded corners */
+    text-align: center; /* Center aligns the text */
+}
 
 .text-animation-container {
     display: inline; /* Set to inline */
@@ -25,7 +25,7 @@ body {
     animation-name: fadeInOut;
     animation-duration: 6s; /* 3 elements x 2s each */
     animation-iteration-count: infinite;
-    color: rgb(234, 212, 212); /* Red text color */
+    color: #e74c3c; /* Red text color */
     font-weight: bold; /* Make text bold */
 }
 
@@ -75,7 +75,7 @@ body {
 }
 
 .about-section {
-    background-color: #879880; /* Light gray background similar to the example */
+    background-color: #ffffff; /* White background */
     padding: 20px;
     border-radius: 5px;
 }
@@ -94,24 +94,24 @@ body {
 }
 
 .custom-link-color {
-    color: #635757; /* Your desired color */
+    color: #e74c3c; /* Red text color */
 }
-
 
 /* --------------------------------------------------    |
  |                                                       |
- |   portfolio section formating starts from here        |
+ |   portfolio section formatting starts from here      |
  |                                                       |
  | -------------------------------------------------- */
 
- .resizable-draggable-card {
+.resizable-draggable-card {
     position: absolute;
     width: 18rem; /* Or any other width */
-    
+    background-color: #f5f5f5; /* Light gray background */
 }
+
 /* card   */
 .card {
-    background-color: rgb(190, 124, 124); /* Nominal white background */
+    background-color: #ffffff; /* White background */
     border: 1px solid #ddd; /* Light border */
     border-radius: 0.25rem; /* Rounded corners */
 }
@@ -123,106 +123,19 @@ body {
     justify-content: space-between; /* This ensures that footer content is pushed to the bottom */
 }
 
-.project-card .card-body {
-    overflow-y: auto; /* Adds scroll to the content if it exceeds the card's height */
-}
+/* Rest of your portfolio section styles... */
 
-.custom-bar {
-    background-color: #333; /* Default background color */
-    height: 50px; /* Default height */
-    color: #fff; /* Default text color */
-    text-align: center;
-    padding: 10px;
-}
+/* --------------------------------------------------    |
+ |                                                       |
+ |   Academics section formatting starts from here      |
+ |                                                       |
+ | -------------------------------------------------- */
 
 
-/* Styles for the upper half of the project card */
-.card-img-top {
-    height: 50%;
-    background-color: #958f8f;
-    position: relative;
-}
 
-/* Grey shades overlay */
-.card-img-top::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
-}
-
-/* Style for the card title */
-.card-title {
-    font-size: 1.25rem;
-    color: #333;
-}
-
-/* Style for the card description */
-.card-text {
-    color: #666;
-}
-
-/* Style for the "Learn More" button */
-.btn-primary {
-    background-color: #007bff;
-    color: #fff;
-}
-
-/* Hover effect for the "Learn More" button */
-.btn-primary:hover {
-    background-color: #0056b3;
-}
-
-/* Style for the image placeholder */
-.image-placeholder {
-            height: 60%;
-            background-color: #333;
-            background-size: contain; /* Scale image to fit within the div */
-            background-repeat: no-repeat; /* Prevent repeating of small images */
-            background-position: center; /* Centers the image */
-        }
-
-.overflow-text {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 3; /* Limit to 2 lines */
-    -webkit-box-orient: vertical;
-}
 
 /* padding just above the section */
 .adjust-section
 {
     padding-top: 100px
 }
-
-/* --------------------------------------------------    |
- |                                                       |
- |   Academics section formating starts from here        |
- |                                                       |
- | -------------------------------------------------- */
-
-
-
-/* Define the animation for sliding up */
-@keyframes slideUp {
-    0% {
-        transform: translateY(100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-
-/* Apply the animation to specific sections */
-#about, #portfolio, #workexperience, #academics, #contact, #thankyou {
-    animation: SlideUP 2s ease-in-out;
-}
-
-
