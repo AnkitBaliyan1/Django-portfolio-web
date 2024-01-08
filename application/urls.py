@@ -8,10 +8,19 @@ urlpatterns = [
     path('dashboard/', views.home, name='home'),
     path('about/', views.about, name='about'),
     path('academics/', views.academics, name="academics"),
+
+
     path('machine-learning/',  views.machinelearning, name='machinelearning'),
     path('SQL/',  views.sql, name='sql'),
     path('bi-tools/',  views.bitools, name='bitools'),
     path('llm/',  views.llm, name='llm'),
+    path('streamlit/', views.streamlit, name='streamlit'),
+    path('django/', views.django, name='django'),
+    path('eda/', views.eda, name='eda'),
+
+
+
     path('upcoming/',  views.upcoming, name='upcoming'),
     path('contact/', views.contact_view, name='contact_view'),
+    path('allprojects/', views.allprojects, name='allprojects'),
 ]

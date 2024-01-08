@@ -1,6 +1,7 @@
 from django.shortcuts import render, HttpResponse, redirect
 from datetime import datetime
 from .forms import ContactForm
+from .models import AllProjects  # Import your AllProjects model
 
 # Create your views here.
 
@@ -23,20 +24,22 @@ def home(request):
 
     return render(request, 'mywebsite/home.html', context)
 
+
+# retrieves all the records from the AllProjects database table
+all_projects = AllProjects.objects.all()
+
+
+
+
 def about(request):
     return render(request, "mywebsite/about.html")
 
 def academics(request):
     return render(request, "mywebsite/academics.html")
 
-def machinelearning(request):
-    return render(request, "mywebsite/machinelearning.html")
 
-def sql(request):
-    return render(request, "mywebsite/sql.html")
 
-def bitools(request):
-    return render(request, "mywebsite/bitools.html")
+
 
 def llm(request):
     return render(request, "mywebsite/llm.html")
@@ -44,26 +47,117 @@ def llm(request):
 def upcoming(request):
     return render(request, "mywebsite/upcoming.html")
 
-def contact(request):
-    pass
+
+
+from django import template
+import time
+register = template.Library()
 
 def contact_view(request):
-    if request.method == 'POST':
+    print("within contact view")
+    if request.method == 'post':
         form = ContactForm(request.POST)
         if form.is_valid():
-            # Process and save the form data
+            '''# Process and save the form data
             name = form.cleaned_data['name']
             email = form.cleaned_data['email']
             subject = form.cleaned_data['subject']
             message = form.cleaned_data['message']
             # Save the data to your data model or perform other actions
-            # ...
+            # ...'''
+            form.save()
+            
 
             # Optionally, you can redirect the user to a success page
             # after processing the form data
-            # return HttpResponseRedirect('/success/')
+            return render(request, 'mywebsite/contact.html')
 
     else:
         form = ContactForm()
 
+    
     return render(request, 'mywebsite/contact.html', {'form': form})
+
+
+
+from django.shortcuts import render
+
+
+def allprojects(request):
+    
+    # Define a context dictionary to pass data to the template
+    context = {
+        'projects': all_projects,
+    }
+    
+    # Render the template with the context data
+    return render(request, 'mywebsite/allprojects.html', context)
+
+
+def bitools(request):
+
+    # Filter projects with project code starting with "DASH"
+    projects = [project for project in all_projects if project.projectCode.lower().startswith("dash")]
+    
+    # Define a context dictionary to pass data to the template
+    context = {
+        'projects': projects,
+    }
+    return render(request, "mywebsite/bitools.html", context)
+
+
+
+def sql(request):
+    # Filter projects with project code starting with "DASH"
+    projects = [project for project in all_projects if project.projectCode.lower().startswith("sql")]
+    
+    # Define a context dictionary to pass data to the template
+    context = {
+        'projects': projects,
+    }
+    return render(request, "mywebsite/sql.html", context)
+
+
+def machinelearning(request):
+    # Filter projects with project code starting with "DASH"
+    projects = [project for project in all_projects if project.projectCode.lower().startswith("ml")]
+    
+    # Define a context dictionary to pass data to the template
+    context = {
+        'projects': projects,
+    }
+    return render(request, "mywebsite/machinelearning.html", context)
+
+
+def streamlit(request):
+    # Filter projects with project code starting with "DASH"
+    projects = [project for project in all_projects if project.projectCode.lower().startswith("st")]
+    
+    # Define a context dictionary to pass data to the template
+    context = {
+        'projects': projects,
+    }
+    return render(request, "mywebsite/streamlit.html", context)
+
+
+def django(request):
+    # Filter projects with project code starting with "DASH"
+    projects = [project for project in all_projects if project.projectCode.lower().startswith("django")]
+    
+    # Define a context dictionary to pass data to the template
+    context = {
+        'projects': projects,
+    }
+    return render(request, "mywebsite/django.html", context)
+
+
+
+def eda(request):
+    # Filter projects with project code starting with "DASH"
+    projects = [project for project in all_projects if project.projectCode.lower().startswith("eda")]
+    
+    # Define a context dictionary to pass data to the template
+    context = {
+        'projects': projects,
+    }
+    return render(request, "mywebsite/eda.html", context)

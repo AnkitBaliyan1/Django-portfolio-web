@@ -1,0 +1,41 @@
+{% extends "mywebsite/base.html" %}
+
+{% block content %}
+    <div class="container my-4 adjust-section">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Welcome to the SQL project section</h1>
+                <p>I have build this section demonstrate SQL projects.</p>
+                
+                <!-- Create a table to display projects -->
+                <table class="table table-bordered text-center align-middle">
+                    <thead>
+                        <tr>
+                            <th>Project Code</th>
+                            <th>Project Title</th>
+                            <th>Description</th>
+                            <th>Link</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Loop through projects and add rows -->
+                        {% for project in projects %}
+                            <tr>
+                                <td class="text-center align-middle">{{ project.projectCode }}</td>
+                                <td class="text-center align-middle">{{ project.title }}</td>
+                                <td class="text-center align-middle">{{ project.description }}</td>
+                                <td class="text-center align-middle"><a href="{{ project.github_link }}">Link</a></td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+        <!-- Add more rows and columns as needed -->
+    </div>
+
+    
+
+    <!-- You can add more HTML elements here as needed -->
+{% endblock %}

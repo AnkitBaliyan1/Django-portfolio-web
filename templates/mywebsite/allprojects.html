@@ -1,0 +1,37 @@
+{% extends "mywebsite/base.html" %}
+
+{% block content %}
+    <div class="container my-4 adjust-section">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Welcome to the ALL PROJECTS section.</h1>
+                <p>This section contains the list of all the projects, all in one place.</p>
+                
+                <!-- Create a table to display projects -->
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Project Code</th>
+                            <th>Project Title</th>
+                            <th>Description</th>
+                            <th>Link</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Loop through projects and add rows -->
+                        {% for project in projects %}
+                            <tr>
+                                <td class="text-center align-middle">{{ project.projectCode }}</td>
+                                <td class="text-center align-middle">{{ project.title }}</td>
+                                <td class="text-center align-middle">{{ project.description }}</td>
+                                <td class="text-center align-middle"><a href="{{ project.github_link }}">Link</a></td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- You can add more HTML elements here as needed -->
+{% endblock %}

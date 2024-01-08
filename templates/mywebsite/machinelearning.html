@@ -1,0 +1,35 @@
+{% extends "mywebsite/base.html" %}
+
+{% block content %}
+    <div class="container my-4 adjust-section">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Welcome to the Machine Learning Projects Section.</h1>
+                <p>I have built this section to specifically display Machine Learning projects.</p>
+                
+                <!-- Create a table to display projects -->
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Project Code</th>
+                            <th>Project Title</th>
+                            <th>Description</th>
+                            <th>Link</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Loop through projects and add rows -->
+                        {% for project in projects %}
+                            <tr>
+                                <td>{{ project.projectCode }}</td>
+                                <td>{{ project.title }}</td>
+                                <td>{{ project.description }}</td>
+                                <td><a href="{{ project.github_link }}">Link</a></td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

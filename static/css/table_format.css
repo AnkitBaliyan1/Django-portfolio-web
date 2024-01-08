@@ -1,0 +1,35 @@
+/* styles.css */
+
+/* General table styles */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Style for table headers */
+.table th {
+    width: 10%; /* Adjust widths as needed */
+}
+
+.table th:nth-child(2) {
+    width: 25%;
+}
+
+.table th:nth-child(3) {
+    width: 50%;
+}
+
+.table th:nth-child(4) {
+    width: 15%;
+}
+
+/* Centering content in cells */
+.table td, .table th {
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Style for links in table */
+.table td a {
+    /* Your styles for the link */
+}

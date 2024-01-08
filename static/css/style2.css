@@ -1,0 +1,150 @@
+/* styles.css */
+
+body {
+    background-color: #f5f5f5; /* Light gray background */
+    color: #333; /* Dark text color */
+    font-family: Arial, sans-serif; /* Example font */
+}
+
+.text-content-border {
+    border: 5px solid #333; /* Dark gray border */
+    padding: 15px; /* Internal spacing */
+    border-radius: 5px; /* Rounded corners */
+    text-align: center; /* Center aligns the text */
+}
+
+.text-animation-container {
+    display: inline; /* Set to inline */
+    position: relative;
+    white-space: nowrap;
+}
+
+.animated-text {
+    position: absolute;
+    opacity: 0;
+    animation-name: fadeInOut;
+    animation-duration: 6s; /* 3 elements x 2s each */
+    animation-iteration-count: infinite;
+    color: #e74c3c; /* Red text color */
+    font-weight: bold; /* Make text bold */
+}
+
+.animated-text:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.animated-text:nth-child(2) {
+    animation-delay: 2s; /* Starts after the first one finishes */
+}
+
+.animated-text:nth-child(3) {
+    animation-delay: 4s; /* Starts after the second one finishes */
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    17% { opacity: 1; } /* Fade in */
+    33% { opacity: 1; }
+    50% { opacity: 0; } /* Fade out */
+    100% { opacity: 0; }
+}
+
+.top-space {
+    /* padding-top: 100px; /* Adjust the value as needed */
+    margin-top: 70px; /* Adjust the value as needed */
+}
+
+/* --------------------------------------------------    |
+ |                                                       |
+ |   profile about section formating starts from here    |
+ |                                                       |
+ | -------------------------------------------------- */
+.profile-image-border {
+    border: 0px solid #ffffff; /* Adjust based on your preference */
+    width: 350px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*background-color: #f0f0f0;  Placeholder for profile image */
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.about-section {
+    background-color: #ffffff; /* White background */
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.about-section h2,
+.about-section h3 {
+    color: #333; /* Dark gray text */
+}
+
+.about-description {
+    margin-bottom: 20px;
+}
+
+.basic-info p {
+    margin-bottom: 5px;
+}
+
+.custom-link-color {
+    color: #e74c3c; /* Red text color */
+}
+
+/* --------------------------------------------------    |
+ |                                                       |
+ |   portfolio section formatting starts from here      |
+ |                                                       |
+ | -------------------------------------------------- */
+
+.resizable-draggable-card {
+    position: absolute;
+    width: 18rem; /* Or any other width */
+    background-color: #f5f5f5; /* Light gray background */
+}
+
+/* card   */
+.card {
+    background-color: #ffffff; /* White background */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 0.25rem; /* Rounded corners */
+}
+
+.project-card .card {
+    height: 250px; /* Adjust the height as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* This ensures that footer content is pushed to the bottom */
+}
+
+/* Rest of your portfolio section styles... */
+
+/* --------------------------------------------------    |
+ |                                                       |
+ |   Academics section formatting starts from here      |
+ |                                                       |
+ | -------------------------------------------------- */
+
+
+
+
+/* padding just above the section */
+.adjust-section
+{
+    padding-top: 100px
+}
+
+
+.custom-bar {
+    background-color: #333; /* Default background color */
+    height: 50px; /* Default height */
+    color: #fff; /* Default text color */
+    text-align: center;
+    padding: 10px;
+}
