@@ -27,8 +27,8 @@ SECRET_KEY = 'django-insecure-pstjfb3-k)^5xvhlp1d_n$-^lwu=xhb8@2l94$nraejc$mzfg8
 #DEBUG = False
 
 #ALLOWED_HOSTS = ["discoverankit.azurewebsites.net"]
-ALLOWED_HOSTS = []
-DEBUG = True
+#ALLOWED_HOSTS = []
+#DEBUG = True
 
 # Application definition
 
@@ -82,7 +82,7 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-'''
+
 
 DATABASES = {
     'default': {
@@ -95,6 +95,27 @@ DATABASES = {
     }
 }
 
+'''
+
+
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATIC_ROOT = os.path.join(BASE_DIR,'static')
+
+connection_string = os.environ['AZURE_POSTGRESQL_CONNECTIONSTRING']
+parameters = {pair.split('=')[0]: pair.split('=')[1] for pair in connection_string.split(' ')}
+
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': parameters['dbname'],
+        'HOST': parameters['host'],
+        'USER': parameters['user'],
+        'PASSWORD': parameters['password'],
+    }
+}
 
 
 # Password validation
@@ -138,3 +159,9 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+ALLOWED_HOSTS = [os.environ['WEBSITE_HOSTNAME']]
+CSRF_TRUSTED_ORIGINS = ['https://'+os.environ['WEBSITE_HOSTNAME']]
+DEBUG = False
