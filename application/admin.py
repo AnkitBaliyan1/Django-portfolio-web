@@ -3,10 +3,12 @@ from .models import Contact, AllProjects
 
 # Register your models here.
 #@admin.register(Contact)
-admin.site.register(Contact)
+#admin.site.register(Contact)
 
-class ContactUsAdmin(admin.ModelAdmin):
+class ContactAdmin(admin.ModelAdmin):
     list_display = ['name','email', 'subject', 'message']
+
+admin.site.register(Contact, ContactAdmin)
 
 
 

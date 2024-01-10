@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse, redirect
+from django.shortcuts import render, HttpResponse
 from datetime import datetime
 from .forms import ContactForm
 from .models import AllProjects  # Import your AllProjects model
@@ -49,38 +49,18 @@ def upcoming(request):
 
 
 
-from django import template
-import time
-register = template.Library()
-
 def contact_view(request):
     print("within contact view")
-    if request.method == 'post':
+    if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
-            '''# Process and save the form data
-            name = form.cleaned_data['name']
-            email = form.cleaned_data['email']
-            subject = form.cleaned_data['subject']
-            message = form.cleaned_data['message']
-            # Save the data to your data model or perform other actions
-            # ...'''
             form.save()
-            
-
-            # Optionally, you can redirect the user to a success page
-            # after processing the form data
-            return render(request, 'mywebsite/contact.html')
-
+            return render(request, 'mywebsite/home.html')
     else:
         form = ContactForm()
 
-    
-    return render(request, 'mywebsite/contact.html', {'form': form})
+    return render(request, 'mywebsite/contact.html', { 'form': form })
 
-
-
-from django.shortcuts import render
 
 
 def allprojects(request):
