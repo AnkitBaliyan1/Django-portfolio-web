@@ -24,11 +24,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-pstjfb3-k)^5xvhlp1d_n$-^lwu=xhb8@2l94$nraejc$mzfg8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = False
+
 
 #ALLOWED_HOSTS = ["discoverankit.azurewebsites.net"]
-#ALLOWED_HOSTS = []
-#DEBUG = True
+ALLOWED_HOSTS = []
+DEBUG = True
 
 # Application definition
 
@@ -82,7 +82,7 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
+'''
 
 DATABASES = {
     'default': {
@@ -92,28 +92,6 @@ DATABASES = {
         'PASSWORD': '1234',
         #'HOST': 'db',  # Use 'localhost' to connect over TCP/IP
         'PORT': '5432',
-    }
-}
-
-'''
-
-
-
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-STATIC_ROOT = os.path.join(BASE_DIR,'static')
-
-connection_string = os.environ['AZURE_POSTGRESQL_CONNECTIONSTRING']
-parameters = {pair.split('=')[0]: pair.split('=')[1] for pair in connection_string.split(' ')}
-
-
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': parameters['dbname'],
-        'HOST': parameters['host'],
-        'USER': parameters['user'],
-        'PASSWORD': parameters['password'],
     }
 }
 
@@ -162,6 +140,3 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 
-ALLOWED_HOSTS = [os.environ['WEBSITE_HOSTNAME']]
-CSRF_TRUSTED_ORIGINS = ['https://'+os.environ['WEBSITE_HOSTNAME']]
-DEBUG = False
