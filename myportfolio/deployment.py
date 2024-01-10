@@ -13,6 +13,17 @@ DEBUG = False
 SECRET_KEY = 'django-insecure-pstjfb3-k)^5xvhlp1d_n$-^lwu=xhb8@2l94$nraejc$mzfg8'
 
 
+INSTALLED_APPS = [
+    'application.apps.ApplicationConfig',
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+]
+
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
