@@ -1,16 +1,17 @@
 import os
 from pathlib import Path
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DJANGO_DEBUG', 'False') == 'True'
+DEBUG = config('DJANGO_DEBUG', 'False') == 'True'
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-pstjfb3-k)^5xvhlp1d_n$-^lwu=xhb8@2l94$nraejc$mzfg8')
+SECRET_KEY = config('DJANGO_SECRET_KEY', 'django-insecure-pstjfb3-k)^5xvhlp1d_n$-^lwu=xhb8@2l94$nraejc$mzfg8')
 
-ALLOWED_HOSTS = [os.environ.get('WEBSITE_HOSTNAME', 'localhost')]
+ALLOWED_HOSTS = [config('WEBSITE_HOSTNAME', 'localhost')]
 CSRF_TRUSTED_ORIGINS = ['https://' + ALLOWED_HOSTS[0]]
 
 # Application definition
@@ -55,7 +56,7 @@ TEMPLATES = [
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-connection_string = os.environ['AZURE_POSTGRESQL_CONNECTIONSTRING']
+connection_string = config('AZURE_POSTGRESQL_CONNECTIONSTRING')
 parameters = {pair.split('=')[0]: pair.split('=')[1] for pair in connection_string.split(' ')}
 
 DATABASES = {
@@ -68,6 +69,8 @@ DATABASES = {
         'PORT': parameters.get('port', ''),
     }
 }
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
